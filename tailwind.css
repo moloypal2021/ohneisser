@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'Univers';
+    src: local('Univers'), url(../font/UniversNextProCondensed.ttf) format('ttf'), url(../font/UniversNextProHeavyCondensed.ttf);
+}
+
+@layer base {
+    body {
+        font-family: 'Univers';
+    }
+}

@@ -557,11 +557,28 @@ video {
 	--tw-ring-offset-shadow: 0 0 #0000;
 	--tw-ring-shadow: 0 0 #0000;
 }
+    body {
+        font-family: 'Univers';
+    }
+.flex {
+	display: flex;
+}
 .h-screen {
 	height: 100vh;
 }
 .w-full {
 	width: 100%;
+}
+.items-center {
+	align-items: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(2rem * var(--tw-space-x-reverse));
+	margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .bg-color {
 	--tw-bg-opacity: 1;
@@ -569,4 +586,19 @@ video {
 }
 .p-8 {
 	padding: 2rem;
+}
+.text-base {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+.font-black {
+	font-weight: 900;
+}
+.text-black {
+	--tw-text-opacity: 1;
+	color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+@font-face {
+    font-family: 'Univers';
+    src: local('Univers'), url(../font/UniversNextProCondensed.ttf) format('ttf'), url(../font/UniversNextProHeavyCondensed.ttf);
 }
