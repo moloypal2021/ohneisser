@@ -588,6 +588,10 @@ video {
 .z-50 {
 	z-index: 50;
 }
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
 .mb-6 {
 	margin-bottom: 1.5rem;
 }
@@ -621,6 +625,21 @@ video {
 .min-w-\[1389px\] {
 	min-width: 1389px;
 }
+.max-w-6xl {
+	max-width: 72rem;
+}
+.max-w-5xl {
+	max-width: 64rem;
+}
+.max-w-7xl {
+	max-width: 80rem;
+}
+.max-w-3xl {
+	max-width: 48rem;
+}
+.max-w-xl {
+	max-width: 36rem;
+}
 .grid-cols-2 {
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -638,6 +657,9 @@ video {
 }
 .gap-12 {
 	gap: 3rem;
+}
+.gap-6 {
+	gap: 1.5rem;
 }
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
 	--tw-space-x-reverse: 0;
@@ -734,6 +756,18 @@ video {
 		width: 62vw;
 	}
 
+	.lg\:max-w-6xl {
+		max-width: 72rem;
+	}
+
+	.lg\:grid-cols-2 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.lg\:gap-12 {
+		gap: 3rem;
+	}
+
 	.lg\:px-12 {
 		padding-left: 3rem;
 		padding-right: 3rem;
@@ -749,8 +783,28 @@ video {
 		gap: 8rem;
 	}
 
+	.xl\:gap-28 {
+		gap: 7rem;
+	}
+
+	.xl\:gap-20 {
+		gap: 5rem;
+	}
+
 	.xl\:px-20 {
 		padding-left: 5rem;
 		padding-right: 5rem;
+	}
+
+	.xl\:pr-8 {
+		padding-right: 2rem;
+	}
+
+	.xl\:pr-7 {
+		padding-right: 1.75rem;
+	}
+
+	.xl\:pr-5 {
+		padding-right: 1.25rem;
 	}
 }
