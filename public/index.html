@@ -20,11 +20,12 @@
         <div class="bg-color fixed inset-0 sm:p-8 py-8 px-4 overflow-hidden z-50" x-show="popUp">
 
             <div class="flex items-center justify-end">
-                <button @click="popUp = false" class="text-base font-black text-black mr-6">
-                    <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button @click="popUp = false" class="text-base font-black text-black focus:outline-none  mr-6">
+                    <svg class="fill-current text-[#202020] hover:text-[#A59DA6]" width="16" height="16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M15.5 2.643L13.357.5 8 5.857 2.643.5.5 2.643 5.857 8 .5 13.357 2.643 15.5 8 10.143l5.357 5.357 2.143-2.143L10.143 8 15.5 2.643z"
-                            fill="#202020" />
+                            fill="" />
                     </svg>
                 </button>
             </div>
@@ -135,7 +136,8 @@
                 <a href="#" class="text-base font-black text-black">OHNEISSER</a>
                 <a href="#" class="text-base font-black text-black">WORK</a>
             </div>
-            <button @click="popUp = true" class="text-base font-black text-black">IMPRINT</button>
+            <button @click="popUp = true"
+                class="text-base font-black text-black focus:outline-none hover:text-[#A59DA6]">IMPRINT</button>
         </nav>
 
 

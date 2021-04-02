@@ -680,6 +680,9 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgba(129, 96, 135, var(--tw-bg-opacity));
 }
+.fill-current {
+	fill: currentColor;
+}
 .p-8 {
 	padding: 2rem;
 }
@@ -712,9 +715,21 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
+.text-\[\#202020\] {
+	--tw-text-opacity: 1;
+	color: rgba(32, 32, 32, var(--tw-text-opacity));
+}
 @font-face {
     font-family: 'Univers';
     src: local('Univers'), url(../font/UniversNextProCondensed.ttf) format('ttf'), url(../font/UniversNextProHeavyCondensed.ttf);
+}
+.hover\:text-\[\#A59DA6\]:hover {
+	--tw-text-opacity: 1;
+	color: rgba(165, 157, 166, var(--tw-text-opacity));
+}
+.focus\:outline-none:focus {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
 }
 @media (min-width: 640px) {
 
