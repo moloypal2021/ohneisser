@@ -6,19 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--Flickity CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="./assets/css/tailwind.css">
-
+    <!-- Flickity.js -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!-- Alpine.js -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+
+
+
 </head>
 
 <body>
-    <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 overflow-hidden relative" x-data="{
-        popUp: false}">
+    <main class="w-full h-screen overflow-hidden" x-data="{
+        popUp: false, openPage: 2}">
         <!-- Pop up Section Start-->
-        <div class="bg-color fixed inset-0 sm:p-8 py-8 px-4 overflow-hidden z-50" x-show="popUp">
-
+        <section class="bg-color fixed inset-0 sm:p-8 py-8 px-4 overflow-hidden z-50" x-show="popUp">
             <div class="flex items-center justify-end">
                 <button @click="popUp = false" class="text-base font-black text-black focus:outline-none  mr-6">
                     <svg class="fill-current text-[#202020] hover:text-[#A59DA6]" width="16" height="16" fill="none"
@@ -30,7 +35,7 @@
                 </button>
             </div>
 
-            <main class="flex items-center justify-center w-full h-full xl:px-20 lg:px-12">
+            <div class="flex items-center justify-center w-full h-full xl:px-20 lg:px-12">
                 <div class="grid lg:grid-cols-2 xl:gap-20 lg:gap-12 gap-6 lg:max-w-6xl max-w-xl mx-auto">
                     <div class="xl:pr-5">
                         <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
@@ -67,11 +72,13 @@
                             Haftung für Inhalte
                         </p>
                         <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
-                            Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach
+                            Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten
+                            nach
                             den
                             allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter
                             jedoch nicht
-                            verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach
+                            verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder
+                            nach
                             Umständen zu
                             forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
                         </p>
@@ -92,9 +99,11 @@
                         <p class="sm:text-[13px] text-xs text-black tracking-[-3%] mb-6">
                             Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen
                             Einfluss haben.
-                            Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte
+                            Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die
+                            Inhalte
                             der
-                            verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+                            verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
+                            verantwortlich.
                             Die verlinkten
                             Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.
                             Rechtswidrige Inhalte
@@ -108,55 +117,211 @@
                             Urheberrecht
                         </p>
                         <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
-                            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem
+                            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
+                            dem
                             deutschen
                             Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung
                             außerhalb der
-                            Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.
+                            Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors
+                            bzw.
                             Erstellers.
-                            Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch
+                            Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen
+                            Gebrauch
                             gestattet.
                             Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die
                             Urheberrechte Dritter
                             beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
                             trotzdem auf eine
-                            Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei
+                            Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis.
+                            Bei
                             Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
                         </p>
                     </div>
                 </div>
-            </main>
-
-        </div>
+            </div>
+        </section>
         <!-- Pop up Section End-->
 
-        <!-- Main Section Start -->
-        <nav class="flex items-center justify-between">
-            <div class="flex space-x-8">
-                <a href="#" class="text-base font-black text-black">OHNEISSER</a>
-                <a href="#" class="text-base font-black text-black">WORK</a>
-            </div>
-            <button @click="popUp = true"
-                class="text-base font-black text-black focus:outline-none hover:text-[#A59DA6]">IMPRINT</button>
-        </nav>
+        <!-- Index Page Section Start -->
+        <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 relative transition duration-700 ease-in-out"
+            :class="{'transform -translate-y-full' : openPage === 2 }">
+            <!-- Main Section Start -->
+            <nav class="flex items-center justify-between">
+                <div class="flex space-x-8">
+                    <p @click="openPage = 1" class="text-base font-black text-black cursor-pointer">OHNEISSER</p>
+                    <p @click="openPage = 2" class="text-base font-black text-black cursor-pointer">WORK</p>
+                </div>
+                <button @click="popUp = true"
+                    class="text-base font-black text-black focus:outline-none hover:text-[#A59DA6]">IMPRINT</button>
+            </nav>
 
-
-        <div class="flex items-center justify-center w-full h-full">
-            <div class="lg:w-[62vw] lg:h-[46.5vh] sm:w-[78vw] sm:h-[31.3vh] w-full h-[214px] bg-[#816087]">
+            <div class="flex items-center justify-center w-full h-full">
+                <div class="lg:w-[62vw] lg:h-[46.5vh] sm:w-[78vw] sm:h-[31.3vh] w-full h-[214px] bg-[#816087]">
+                </div>
             </div>
+
+            <!-- ohneisser text Section -->
+            <section class="absolute bottom-16 inset-x-0 sm:px-6 px-4 flex justify-center items-center overflow-hidden">
+                <img src="./assets/images/ohneisser.svg" alt="" class="min-w-[1389px] w-screen">
+            </section>
+
+            <!-- Footer Section -->
+            <footer class="absolute bottom-5">
+                <a href="#" class="sm:text-base text-xs font-black text-black">ANDRIES DEMY OHNEISSER | CREATIVE |
+                    DIGITAL
+                    PORTFOLIO</a>
+            </footer>
+            <!-- Main Section End -->
+
         </div>
-        <!-- ohneisser text Section -->
-        <section class="absolute bottom-16 inset-x-0 sm:px-6 px-4 flex justify-center items-center overflow-hidden">
-            <img src="./assets/images/ohneisser.svg" alt="" class="min-w-[1389px] w-screen">
-        </section>
-        <!-- Footer Section -->
-        <footer class="absolute bottom-5">
-            <a href="#" class="sm:text-base text-xs font-black text-black">ANDRIES DEMY OHNEISSER | CREATIVE | DIGITAL
-                PORTFOLIO</a>
-        </footer>
-        <!-- Main Section End -->
+        <!-- Index Page Section End -->
 
-    </div>
+        <!-- Second Page Section Start -->
+        <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 relative transition duration-700 ease-in-out"
+            :class="{'transform -translate-y-full' : openPage === 2 }">
+            <!-- Nav Section Start -->
+            <nav class="flex items-center justify-between">
+                <div class="flex space-x-8">
+                    <p @click="openPage = 1" class="text-base font-black text-black cursor-pointer">OHNEISSER</p>
+                    <p @click="openPage = 2" class="text-base font-black text-black cursor-pointer">WORK</p>
+                </div>
+                <button @click="popUp = true"
+                    class="text-base font-black text-black focus:outline-none hover:text-[#A59DA6]">IMPRINT</button>
+            </nav>
+
+
+            <div class="flex flex-col space-y-8 justify-center w-full h-full">
+                <div class="group flex md:flex-row flex-col md:items-center w-full">
+                    <h1
+                        class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%]">
+                        ceramic supplier | INFO SITE
+                    </h1>
+                    <div class="w-7/12" x-data="{ open: false }">
+                        <div class="" x-data="carousel()" x-init="init()">
+                            <div class="carousel carousel-main w-full hidden" x-ref="carousel">
+                                <div class="carousel-cell w-full">
+                                    <img src="./assets/images/img1.jpg" alt="" class="w-[480px] h-[255px] ">
+                                </div>
+                                <div class="carousel-cell w-full">
+                                    <img src="./assets/images/img2.jpg" alt="" class="w-[480px] h-[255px] ">
+                                </div>
+                                <div class="carousel-cell w-full">
+                                    <img src="./assets/images/img3.jpg" alt="" class="w-[480px] h-[255px] ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-xs"
+                            data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false, "prevNextButtons": false }'>
+                            <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                <img src="./assets/images/img1.jpg" alt="" class="w-[80px] h-[55px] ">
+                            </div>
+                            <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                <img src="./assets/images/img2.jpg" alt="" class="w-[80px] h-[55px] ">
+                            </div>
+                            <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                <img src="./assets/images/img3.jpg" alt="" class="w-[80px] h-[55px] ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="flex md:flex-row flex-col md:items-center">
+                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
+                        XOHN | AUGMENTED REALITY
+                        SITE
+                    </h1>
+                </div>
+                <div class="flex md:flex-row flex-col md:items-center">
+                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
+                        THE NORTH FACE | MOTION
+                        DESIGN
+                    </h1>
+                </div>
+                <div class="">
+                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
+                        THE NORTH FACE | MOTION
+                        DESIGN
+                    </h1>
+                </div>
+                <div class="">
+                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
+                        HAY | 3d ADVertisement
+                    </h1>
+                </div>
+                <div class="">
+                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
+                        Dönar | web presence
+                    </h1>
+                </div>
+                <div class="">
+                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
+                        Devio | corporate design
+                    </h1>
+                </div>
+                <div class="">
+                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
+                        monolo | vintage online shop
+                    </h1>
+                </div> -->
+
+            </div>
+
+            <!-- Footer Section -->
+            <footer class="absolute bottom-5">
+                <a href="#" class="sm:text-base text-xs font-black text-black">ANDRIES DEMY OHNEISSER | CREATIVE |
+                    DIGITAL
+                    PORTFOLIO</a>
+            </footer>
+        </div>
+        <!-- Second Page Section Start -->
+
+        <!-- Aditional Js -->
+        <script>
+            function carousel() {
+                return {
+                    active: 0,
+                    init() {
+                        var carousel = this.$refs.carousel;
+                        var flkty = new Flickity(this.$refs.carousel, {
+                            wrapAround: false,
+                            autoPlay: false,
+                            prevNextButtons: false,
+                            pageDots: false,
+                            draggable: true
+                        });
+                        flkty.on('change', i => this.active = i);
+
+                        var showButton = document.querySelector('.carousel-nav .carousel-cell');
+                        showButton.addEventListener('click', function () {
+                            // un-hide carousel
+                            carousel.style.display = 'block';
+                            // Flickity resize
+                            flkty.resize();
+                        });
+
+
+
+                    },
+                }
+            }
+
+            // function itemCarousel() {
+            //     return {
+            //         active: 0,
+            //         init() {
+            //             var flkty = new Flickity(this.$refs.carousel, {
+            //                 wrapAround: true,
+            //                 autoPlay: 3000,
+            //                 prevNextButtons: false,
+            //                 pageDots: true,
+            //                 draggable: true
+            //             });
+            //             flkty.on('change', i => this.active = i);
+            //         },
+            //     }
+            // }
+        </script>
+    </main>
+
 </body>
 
 </html>
