@@ -14,17 +14,130 @@
 </head>
 
 <body>
-    <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 overflow-hidden relative">
-        <!-- Page 1 -->
-        <nav class="">
-            <nav class="flex items-center justify-between">
-                <div class="flex space-x-8">
-                    <a href="#" class="text-base font-black text-black">OHNEISSER</a>
-                    <a href="#" class="text-base font-black text-black">WORK</a>
+    <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 overflow-hidden relative" x-data="{
+        popUp: false}">
+        <!-- Pop up Section Start-->
+        <div class="bg-color fixed inset-0 sm:p-8 py-8 px-4 overflow-hidden z-50" x-show="popUp">
+
+            <div class="flex items-center justify-end">
+                <button @click="popUp = false" class="text-base font-black text-black mr-6">
+                    <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.5 2.643L13.357.5 8 5.857 2.643.5.5 2.643 5.857 8 .5 13.357 2.643 15.5 8 10.143l5.357 5.357 2.143-2.143L10.143 8 15.5 2.643z"
+                            fill="#202020" />
+                    </svg>
+                </button>
+            </div>
+
+            <main class="flex items-center justify-center w-full h-full xl:px-20 lg:px-12">
+                <div class="grid grid-cols-2 xl:gap-32 gap-12">
+                    <div class="lg:pr-8">
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Impressum
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Angaben gemäß § 5 TMG
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Andries Ohneisser
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Raitelsbergstrasse, 50a
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            70188 Stuttgart
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Kontakt
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Telefon: 017663632703
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            E-Mail: andries.ohneisser@gmail.com
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Redaktionell Verantwortlicher
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%] mb-6">
+                            Andries Ohneisser
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Haftung für Inhalte
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach
+                            den
+                            allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter
+                            jedoch nicht
+                            verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach
+                            Umständen zu
+                            forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den
+                            allgemeinen
+                            Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem
+                            Zeitpunkt der
+                            Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden
+                            Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+
+                        </p>
+                    </div>
+                    <div class="">
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Haftung für Links
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%] mb-6">
+                            Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen
+                            Einfluss haben.
+                            Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte
+                            der
+                            verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+                            Die verlinkten
+                            Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.
+                            Rechtswidrige Inhalte
+                            waren zum Zeitpunkt der Verlinkung nicht erkennbar. <br />
+                            Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete
+                            Anhaltspunkte einer
+                            Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
+                            derartige Linksumgehend entfernen.
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Urheberrecht
+                        </p>
+                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem
+                            deutschen
+                            Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung
+                            außerhalb der
+                            Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.
+                            Erstellers.
+                            Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch
+                            gestattet.
+                            Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die
+                            Urheberrechte Dritter
+                            beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
+                            trotzdem auf eine
+                            Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei
+                            Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                        </p>
+                    </div>
                 </div>
-                <a href="#" class="text-base font-black text-black">IMPRINT</a>
-            </nav>
+            </main>
+
+        </div>
+        <!-- Pop up Section End-->
+
+        <!-- Main Section Start -->
+        <nav class="flex items-center justify-between">
+            <div class="flex space-x-8">
+                <a href="#" class="text-base font-black text-black">OHNEISSER</a>
+                <a href="#" class="text-base font-black text-black">WORK</a>
+            </div>
+            <button @click="popUp = true" class="text-base font-black text-black">IMPRINT</button>
         </nav>
+
 
         <div class="flex items-center justify-center w-full h-full">
             <div class="lg:w-[62vw] lg:h-[46.5vh] sm:w-[78vw] sm:h-[31.3vh] w-full h-[214px] bg-[#816087]">
@@ -39,6 +152,8 @@
             <a href="#" class="sm:text-base text-xs font-black text-black">ANDRIES DEMY OHNEISSER | CREATIVE | DIGITAL
                 PORTFOLIO</a>
         </footer>
+        <!-- Main Section End -->
+
     </div>
 </body>
 
