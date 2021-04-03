@@ -200,10 +200,10 @@
                     <div class="lg:w-7/12 md:w-5/12">
                         <div class="" x-data="carousel()" x-init="init()">
                             <!-- Full Screen Slider Start -->
-                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8"
-                                :class="show === 0 ? '-z-1000 opacity-0' : 'z-50 opacity-100'">
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                :class="show === 0 ? 'hidden' : 'block'">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click="show = 1"
+                                <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
                                     id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full bg-red-400">
                                         <img src="./assets/images/img1.jpg" alt="" class="w-[977px]">

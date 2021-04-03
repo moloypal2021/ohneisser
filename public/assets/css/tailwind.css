@@ -621,6 +621,12 @@ video {
 .grid {
 	display: grid;
 }
+.block {
+	display: block;
+}
+.hidden {
+	display: none;
+}
 .h-screen {
 	height: 100vh;
 }
