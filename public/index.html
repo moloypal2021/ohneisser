@@ -16,7 +16,7 @@
 
 <body>
     <main class="w-full h-screen overflow-hidden" x-data="{
-        popUp: false, openPage: 2}">
+        popUp: false, openPage: 1}">
         <!-- Pop up Section Start-->
         <section class="bg-color fixed inset-0 sm:p-8 py-8 px-4 overflow-hidden z-50" x-show="popUp">
             <div class="flex items-center justify-end">
@@ -187,7 +187,7 @@
 
             <div class="flex flex-col justify-center w-full h-full">
                 <!-- Item 1  -->
-                <div class="group flex md:flex-row flex-col md:items-center w-full h-[60px] my-8">
+                <div class="group flex md:flex-row flex-col md:items-center w-full h-[60px] my-4">
                     <h1
                         class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
                         ceramic supplier | INFO SITE
@@ -238,7 +238,7 @@
                 </div>
 
                 <!-- Item 2  -->
-                <div class="group flex md:flex-row flex-col md:items-center w-full h-[60px] my-8">
+                <div class="group flex md:flex-row flex-col md:items-center w-full h-[60px] my-4">
                     <h1
                         class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
                         XOHN | AUGMENTED REALITY SITE
@@ -252,6 +252,108 @@
                                 <!-- Set Unique ID For Each Slider -->
                                 <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
                                     id="carousel2" x-ref="carousel">
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img4.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img5.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img6.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Full Screen Slider End -->
+
+                            <!-- Text side Slider Nav Start -->
+                            <!-- Set ID For Slider Tigger -->
+                            <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-xs"
+                                data-flickity='{ "asNavFor": "#carousel2", "contain": true, "pageDots": false, "prevNextButtons": false }'>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img4.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img5.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img6.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                            </div>
+                            <!-- Text side Slider Nav End -->
+                        </div>
+                    </div>
+                    <!-- Slider End -->
+                </div>
+
+                <!-- Item 3  -->
+                <div class="group flex md:flex-row flex-col md:items-center w-full h-[60px] my-4">
+                    <h1
+                        class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
+                        THE NORTH FACE | MOTION DESIGN
+                    </h1>
+                    <!-- Slider Start -->
+                    <div class="lg:w-7/12 md:w-5/12">
+                        <div class="" x-data="carousel()" x-init="init()">
+                            <!-- Full Screen Slider Start -->
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                x-show="show === 1">
+                                <!-- Set Unique ID For Each Slider -->
+                                <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
+                                    id="carousel3" x-ref="carousel">
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img7.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img3.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img4.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Full Screen Slider End -->
+
+                            <!-- Text side Slider Nav Start -->
+                            <!-- Set ID For Slider Tigger -->
+                            <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-xs"
+                                data-flickity='{ "asNavFor": "#carousel3", "contain": true, "pageDots": false, "prevNextButtons": false }'>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img7.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img3.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img4.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                            </div>
+                            <!-- Text side Slider Nav End -->
+                        </div>
+                    </div>
+                    <!-- Slider End -->
+                </div>
+
+                <!-- Item 4  -->
+                <div class="group flex md:flex-row flex-col md:items-center w-full h-[60px] my-4">
+                    <h1
+                        class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
+                        HAY | 3d ADVertisement
+                    </h1>
+                    <!-- Slider Start -->
+                    <div class="lg:w-7/12 md:w-5/12">
+                        <div class="" x-data="carousel()" x-init="init()">
+                            <!-- Full Screen Slider Start -->
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                x-show="show === 1">
+                                <!-- Set Unique ID For Each Slider -->
+                                <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
+                                    id="carousel4" x-ref="carousel">
                                     <div class="carousel-cell w-full bg-red-400">
                                         <img src="./assets/images/img1.jpg" alt="" class="w-[977px]">
                                     </div>
@@ -268,7 +370,7 @@
                             <!-- Text side Slider Nav Start -->
                             <!-- Set ID For Slider Tigger -->
                             <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-xs"
-                                data-flickity='{ "asNavFor": "#carousel2", "contain": true, "pageDots": false, "prevNextButtons": false }'>
+                                data-flickity='{ "asNavFor": "#carousel4", "contain": true, "pageDots": false, "prevNextButtons": false }'>
                                 <div class="carousel-cell w-[80px] h-[55px] mx-2">
                                     <img src="./assets/images/img1.jpg" alt="" @click="show = 1"
                                         class="w-[80px] h-[55px]">
@@ -288,6 +390,159 @@
                     <!-- Slider End -->
                 </div>
 
+
+                <!-- Item 5  -->
+                <div class="group flex md:flex-row flex-col md:items-center w-full h-[60px] my-4">
+                    <h1
+                        class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
+                        Dönar | web presence
+                    </h1>
+                    <!-- Slider Start -->
+                    <div class="lg:w-7/12 md:w-5/12">
+                        <div class="" x-data="carousel()" x-init="init()">
+                            <!-- Full Screen Slider Start -->
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                x-show="show === 1">
+                                <!-- Set Unique ID For Each Slider -->
+                                <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
+                                    id="carousel5" x-ref="carousel">
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img1.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img2.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img3.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Full Screen Slider End -->
+
+                            <!-- Text side Slider Nav Start -->
+                            <!-- Set ID For Slider Tigger -->
+                            <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-xs"
+                                data-flickity='{ "asNavFor": "#carousel5", "contain": true, "pageDots": false, "prevNextButtons": false }'>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img1.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img2.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img3.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                            </div>
+                            <!-- Text side Slider Nav End -->
+                        </div>
+                    </div>
+                    <!-- Slider End -->
+                </div>
+
+                <!-- Item 6  -->
+                <div class="group flex md:flex-row flex-col md:items-center w-full h-[60px] my-4">
+                    <h1
+                        class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
+                        Devio | corporate design
+                    </h1>
+                    <!-- Slider Start -->
+                    <div class="lg:w-7/12 md:w-5/12">
+                        <div class="" x-data="carousel()" x-init="init()">
+                            <!-- Full Screen Slider Start -->
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                x-show="show === 1">
+                                <!-- Set Unique ID For Each Slider -->
+                                <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
+                                    id="carousel6" x-ref="carousel">
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img1.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img2.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img3.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Full Screen Slider End -->
+
+                            <!-- Text side Slider Nav Start -->
+                            <!-- Set ID For Slider Tigger -->
+                            <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-xs"
+                                data-flickity='{ "asNavFor": "#carousel6", "contain": true, "pageDots": false, "prevNextButtons": false }'>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img1.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img2.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img3.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                            </div>
+                            <!-- Text side Slider Nav End -->
+                        </div>
+                    </div>
+                    <!-- Slider End -->
+                </div>
+
+                <!-- Item 7  -->
+                <div class="group flex md:flex-row flex-col md:items-center w-full h-[60px] my-4">
+                    <h1
+                        class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
+                        monolo | vintage online shop
+                    </h1>
+                    <!-- Slider Start -->
+                    <div class="lg:w-7/12 md:w-5/12">
+                        <div class="" x-data="carousel()" x-init="init()">
+                            <!-- Full Screen Slider Start -->
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                x-show="show === 1">
+                                <!-- Set Unique ID For Each Slider -->
+                                <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
+                                    id="carousel7" x-ref="carousel">
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img1.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img2.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img3.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Full Screen Slider End -->
+
+                            <!-- Text side Slider Nav Start -->
+                            <!-- Set ID For Slider Tigger -->
+                            <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-xs"
+                                data-flickity='{ "asNavFor": "#carousel7", "contain": true, "pageDots": false, "prevNextButtons": false }'>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img1.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img2.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img3.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
+                                </div>
+                            </div>
+                            <!-- Text side Slider Nav End -->
+                        </div>
+                    </div>
+                    <!-- Slider End -->
+                </div>
             </div>
 
             <!-- Footer Section -->
