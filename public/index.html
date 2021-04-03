@@ -221,16 +221,18 @@
                             <!-- Text side Slider Nav Start -->
                             <!-- Set ID For Slider Tigger -->
                             <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-xs"
-                                @click="show = 1"
                                 data-flickity='{ "asNavFor": "#carousel1", "contain": true, "pageDots": false, "prevNextButtons": false }'>
                                 <div class="carousel-cell w-[80px] h-[55px] mx-2">
-                                    <img src="./assets/images/img1.jpg" alt="" class="w-[80px] h-[55px]">
+                                    <img src="./assets/images/img1.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
                                 </div>
                                 <div class="carousel-cell w-[80px] h-[55px] mx-2">
-                                    <img src="./assets/images/img2.jpg" alt="" class="w-[80px] h-[55px]">
+                                    <img src="./assets/images/img2.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
                                 </div>
                                 <div class="carousel-cell w-[80px] h-[55px] mx-2">
-                                    <img src="./assets/images/img3.jpg" alt="" class="w-[80px] h-[55px]">
+                                    <img src="./assets/images/img3.jpg" alt="" @click="show = 1"
+                                        class="w-[80px] h-[55px]">
                                 </div>
                             </div>
                             <!-- Text side Slider Nav End -->
@@ -266,7 +268,7 @@
                             prevNextButtons: false,
                             pageDots: false,
                             draggable: true,
-                            resize: true,
+                            resize: false,
                             adaptiveHeight: true,
                             lazyLoad: true
 
