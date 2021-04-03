@@ -615,11 +615,13 @@
                             draggable: true,
                             resize: true,
                             adaptiveHeight: true,
-                            lazyLoad: true
+                            lazyLoad: false,
+                            imagesLoaded: true
 
                         });
-                        flkty.on('change', i => this.active = i);
                         flkty.resize();
+                        flkty.on('change', i => this.active = i);
+
                     },
                 }
             }
