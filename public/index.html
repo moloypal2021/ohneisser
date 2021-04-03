@@ -199,14 +199,13 @@
                     </h1>
                     <!-- Slider Start -->
                     <div class="lg:w-7/12 md:w-5/12">
-                        <div class="" x-data="{show: false}">
+                        <div class="" x-data="carousel()" x-init="init()">
                             <!-- Full Screen Slider Start -->
-                            <div
-                                class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50">
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                :class="{'hidden' : !show}">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-[1000px] max-w-[1000px]"
-                                    data-flickity='{"pageDots": false, "prevNextButtons": false }' id="carousel1"
-                                    @click.away="show = false">
+                                <div class="carousel carousel-main w-[1000px] max-w-[1000px]" id="carousel1"
+                                    @click.away="show = false" x-ref="carousel">
                                     <div class="carousel-cell w-full bg-red-400">
                                         <img src="./assets/images/img1.jpg" alt="" class="w-[977px]">
                                     </div>
@@ -241,6 +240,60 @@
                     <!-- Slider End -->
                 </div>
 
+                <!-- Item 2  -->
+                <div class="group flex md:flex-row flex-col md:items-center w-full h-[60px] my-8">
+                    <h1
+                        class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
+                        XOHN | AUGMENTED REALITY SITE
+                    </h1>
+                    <!-- Slider Start -->
+                    <div class="lg:w-7/12 md:w-5/12">
+                        <div class="" x-data="carousel()" x-init="init()">
+                            <!-- Full Screen Slider Start -->
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                x-show="show">asdasdsa
+                                <!-- Set Unique ID For Each Slider -->
+                                <div class="carousel carousel-main w-[1000px] max-w-[1000px]" id="carousel2"
+                                    @click.away="openSlide(false)" x-ref="carousel">
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img4.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img5.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img6.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full bg-red-400">
+                                        <img src="./assets/images/img7.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Full Screen Slider End -->
+
+                            <!-- Text side Slider Nav Start -->
+                            <!-- Set ID For Slider Tigger -->
+                            <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-sm"
+                                @click="openSlide(true)"
+                                data-flickity='{ "asNavFor": "#carousel2", "contain": true, "pageDots": false, "prevNextButtons": false}'>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img4.jpg" alt="" class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img5.jpg" alt="" class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img6.jpg" alt="" class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img7.jpg" alt="" class="w-[80px] h-[55px]">
+                                </div>
+                            </div>
+                            <!-- Text side Slider Nav End -->
+                        </div>
+                    </div>
+                    <!-- Slider End -->
+                </div>
 
 
             </div>
@@ -255,7 +308,7 @@
         <!-- Second Page Section Start -->
 
         <!-- Aditional Js -->
-        <!-- <script>
+        <script>
             function carousel() {
                 return {
                     active: 0,
@@ -274,16 +327,26 @@
 
                         });
                         flkty.on('change', i => this.active = i);
-                        if (this.show) {
-                            flkty.resize();
-                            console.log(this.show)
-                        }
-
+                        // if (this.show) {
+                        //     flkty.resize();
+                        //     console.log(this.show)
+                        // }
                     },
+                    openSlide(props) {
+                        var carousel = this.$refs.carousel;
+                        var flkty = new Flickity(this.$refs.carousel);
+                        if (props) {
+                            this.show = props;
+                            flkty.resize();
+                        } else {
+                            this.show = props;
+                        }
+                        console.log(this.show)
+                    }
 
                 }
             }
-        </script> -->
+        </script>
     </main>
 
 </body>
