@@ -197,7 +197,7 @@
                         <div class="" x-data="carousel()" x-init="init()">
                             <!-- Full Screen Slider Start -->
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
-                                :class="show === 0 ? 'hidden' : 'block'">
+                                x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
                                 <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
                                     id="carousel1" x-ref="carousel">
@@ -248,7 +248,7 @@
                         <div class="" x-data="carousel()" x-init="init()">
                             <!-- Full Screen Slider Start -->
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
-                                :class="show === 0 ? 'hidden' : 'block'">
+                                x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
                                 <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
                                     id="carousel2" x-ref="carousel">
