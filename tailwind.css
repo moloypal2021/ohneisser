@@ -11,3 +11,7 @@
         font-family: 'Univers';
     }
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
