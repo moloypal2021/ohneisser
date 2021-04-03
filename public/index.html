@@ -166,7 +166,7 @@
             </section>
 
             <!-- Footer Section -->
-            <footer class="absolute bottom-5">
+            <footer class="absolute bottom-5 z-0">
                 <a href="#" class="sm:text-base text-xs font-black text-black">ANDRIES DEMY OHNEISSER | CREATIVE |
                     DIGITAL
                     PORTFOLIO</a>
@@ -177,7 +177,7 @@
         <!-- Index Page Section End -->
 
         <!-- Second Page Section Start -->
-        <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 relative transition duration-700 ease-in-out"
+        <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 relative transition duration-700 ease-in-out relative"
             :class="{'transform -translate-y-full' : openPage === 2 }">
             <!-- Nav Section Start -->
             <nav class="flex items-center justify-between">
@@ -190,83 +190,111 @@
             </nav>
 
 
-            <div class="flex flex-col space-y-8 justify-center w-full h-full">
-                <div class="group flex md:flex-row flex-col md:items-center w-full">
+            <div class="flex flex-col justify-center w-full h-full">
+                <div class="group flex md:flex-row flex-col md:items-center w-full my-4">
                     <h1
-                        class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%]">
+                        class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
                         ceramic supplier | INFO SITE
                     </h1>
-                    <div class="w-7/12" x-data="{ open: false }">
+                    <!-- Slider Start -->
+                    <div class="lg:w-7/12 md:w-5/12">
                         <div class="" x-data="carousel()" x-init="init()">
-                            <div class="carousel carousel-main w-full hidden" x-ref="carousel">
-                                <div class="carousel-cell w-full">
-                                    <img src="./assets/images/img1.jpg" alt="" class="w-[480px] h-[255px] ">
+                            <!-- Full Screen Slider Start -->
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                x-show="show">
+                                <!-- Set Unique ID For Each Slider -->
+                                <div class="carousel carousel-main w-full max-w-[1000px]" id="carousel1"
+                                    @click.away="show = false" x-ref="carousel">
+                                    <div class="carousel-cell w-full">
+                                        <img src="./assets/images/img1.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full">
+                                        <img src="./assets/images/img2.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full">
+                                        <img src="./assets/images/img3.jpg" alt="" class="w-[977px]">
+                                    </div>
                                 </div>
-                                <div class="carousel-cell w-full">
-                                    <img src="./assets/images/img2.jpg" alt="" class="w-[480px] h-[255px] ">
+                            </div>
+                            <!-- Full Screen Slider End -->
+
+                            <!-- Text side Slider Nav Start -->
+                            <!-- Set ID For Slider Tigger -->
+                            <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-xs"
+                                @click="show = true"
+                                data-flickity='{ "asNavFor": "#carousel1", "contain": true, "pageDots": false, "prevNextButtons": false }'>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img1.jpg" alt="" class="w-[80px] h-[55px]">
                                 </div>
-                                <div class="carousel-cell w-full">
-                                    <img src="./assets/images/img3.jpg" alt="" class="w-[480px] h-[255px] ">
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img2.jpg" alt="" class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img3.jpg" alt="" class="w-[80px] h-[55px]">
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-xs"
-                            data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false, "prevNextButtons": false }'>
-                            <div class="carousel-cell w-[80px] h-[55px] mx-2">
-                                <img src="./assets/images/img1.jpg" alt="" class="w-[80px] h-[55px] ">
-                            </div>
-                            <div class="carousel-cell w-[80px] h-[55px] mx-2">
-                                <img src="./assets/images/img2.jpg" alt="" class="w-[80px] h-[55px] ">
-                            </div>
-                            <div class="carousel-cell w-[80px] h-[55px] mx-2">
-                                <img src="./assets/images/img3.jpg" alt="" class="w-[80px] h-[55px] ">
-                            </div>
+                            <!-- Text side Slider Nav End -->
                         </div>
                     </div>
+                    <!-- Slider End -->
                 </div>
-                <!-- <div class="flex md:flex-row flex-col md:items-center">
-                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
-                        XOHN | AUGMENTED REALITY
-                        SITE
+                <div class="group flex md:flex-row flex-col md:items-center w-full my-4">
+                    <h1
+                        class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
+                        XOHN | AUGMENTED REALITY SITE
                     </h1>
-                </div>
-                <div class="flex md:flex-row flex-col md:items-center">
-                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
-                        THE NORTH FACE | MOTION
-                        DESIGN
-                    </h1>
-                </div>
-                <div class="">
-                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
-                        THE NORTH FACE | MOTION
-                        DESIGN
-                    </h1>
-                </div>
-                <div class="">
-                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
-                        HAY | 3d ADVertisement
-                    </h1>
-                </div>
-                <div class="">
-                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
-                        Dönar | web presence
-                    </h1>
-                </div>
-                <div class="">
-                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
-                        Devio | corporate design
-                    </h1>
-                </div>
-                <div class="">
-                    <h1 class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] tracking-[-3%]">
-                        monolo | vintage online shop
-                    </h1>
-                </div> -->
+                    <!-- Slider Start -->
+                    <div class="lg:w-7/12 md:w-5/12">
+                        <div class="" x-data="carousel()" x-init="init()">
+                            <!-- Full Screen Slider Start -->
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                x-show="show">
+                                <!-- Set Unique ID For Each Slider -->
+                                <div class="carousel carousel-main w-full max-w-[1000px]" id="carousel2"
+                                    @click.away="show = false" x-ref="carousel">
+                                    <div class="carousel-cell w-full">
+                                        <img src="./assets/images/img4.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full">
+                                        <img src="./assets/images/img5.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full">
+                                        <img src="./assets/images/img6.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                    <div class="carousel-cell w-full">
+                                        <img src="./assets/images/img7.jpg" alt="" class="w-[977px]">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Full Screen Slider End -->
 
+                            <!-- Text side Slider Nav Start -->
+                            <!-- Set ID For Slider Tigger -->
+                            <div class="carousel carousel-nav opacity-0 group-hover:opacity-100 max-w-sm"
+                                @click="show = true"
+                                data-flickity='{ "asNavFor": "#carousel2", "contain": true, "pageDots": false, "prevNextButtons": false}'>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img4.jpg" alt="" class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img5.jpg" alt="" class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img6.jpg" alt="" class="w-[80px] h-[55px]">
+                                </div>
+                                <div class="carousel-cell w-[80px] h-[55px] mx-2">
+                                    <img src="./assets/images/img7.jpg" alt="" class="w-[80px] h-[55px]">
+                                </div>
+                            </div>
+                            <!-- Text side Slider Nav End -->
+                        </div>
+                    </div>
+                    <!-- Slider End -->
+                </div>
             </div>
 
             <!-- Footer Section -->
-            <footer class="absolute bottom-5">
+            <footer class="absolute bottom-5 z-0">
                 <a href="#" class="sm:text-base text-xs font-black text-black">ANDRIES DEMY OHNEISSER | CREATIVE |
                     DIGITAL
                     PORTFOLIO</a>
@@ -279,6 +307,7 @@
             function carousel() {
                 return {
                     active: 0,
+                    show: false,
                     init() {
                         var carousel = this.$refs.carousel;
                         var flkty = new Flickity(this.$refs.carousel, {
@@ -286,39 +315,20 @@
                             autoPlay: false,
                             prevNextButtons: false,
                             pageDots: false,
-                            draggable: true
+                            draggable: true,
+                            resize: false,
+                            adaptiveHeight: true
+
                         });
                         flkty.on('change', i => this.active = i);
-
-                        var showButton = document.querySelector('.carousel-nav .carousel-cell');
-                        showButton.addEventListener('click', function () {
-                            // un-hide carousel
-                            carousel.style.display = 'block';
-                            // Flickity resize
+                        if (this.show) {
                             flkty.resize();
-                        });
-
-
+                        }
 
                     },
+
                 }
             }
-
-            // function itemCarousel() {
-            //     return {
-            //         active: 0,
-            //         init() {
-            //             var flkty = new Flickity(this.$refs.carousel, {
-            //                 wrapAround: true,
-            //                 autoPlay: 3000,
-            //                 prevNextButtons: false,
-            //                 pageDots: true,
-            //                 draggable: true
-            //             });
-            //             flkty.on('change', i => this.active = i);
-            //         },
-            //     }
-            // }
         </script>
     </main>
 
