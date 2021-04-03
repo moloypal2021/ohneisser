@@ -191,7 +191,8 @@
 
 
             <div class="flex flex-col justify-center w-full h-full">
-                <div class="group flex md:flex-row flex-col md:items-center w-full my-4">
+                <!-- Item 1  -->
+                <div class="group flex md:flex-row flex-col md:items-center w-full my-8">
                     <h1
                         class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
                         ceramic supplier | INFO SITE
@@ -205,13 +206,13 @@
                                 <!-- Set Unique ID For Each Slider -->
                                 <div class="carousel carousel-main w-full max-w-[1000px]" id="carousel1"
                                     @click.away="show = false" x-ref="carousel">
-                                    <div class="carousel-cell w-full">
+                                    <div class="carousel-cell w-full bg-red-400">
                                         <img src="./assets/images/img1.jpg" alt="" class="w-[977px]">
                                     </div>
-                                    <div class="carousel-cell w-full">
+                                    <div class="carousel-cell w-full bg-red-400">
                                         <img src="./assets/images/img2.jpg" alt="" class="w-[977px]">
                                     </div>
-                                    <div class="carousel-cell w-full">
+                                    <div class="carousel-cell w-full bg-red-400">
                                         <img src="./assets/images/img3.jpg" alt="" class="w-[977px]">
                                     </div>
                                 </div>
@@ -238,7 +239,9 @@
                     </div>
                     <!-- Slider End -->
                 </div>
-                <div class="group flex md:flex-row flex-col md:items-center w-full my-4">
+
+                <!-- Item 2  -->
+                <div class="group flex md:flex-row flex-col md:items-center w-full my-8">
                     <h1
                         class="lg:text-4xl sm:text-[30px] text-2xl font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] md:mb-0 mb-5">
                         XOHN | AUGMENTED REALITY SITE
@@ -252,16 +255,16 @@
                                 <!-- Set Unique ID For Each Slider -->
                                 <div class="carousel carousel-main w-full max-w-[1000px]" id="carousel2"
                                     @click.away="show = false" x-ref="carousel">
-                                    <div class="carousel-cell w-full">
+                                    <div class="carousel-cell w-full bg-red-400">
                                         <img src="./assets/images/img4.jpg" alt="" class="w-[977px]">
                                     </div>
-                                    <div class="carousel-cell w-full">
+                                    <div class="carousel-cell w-full bg-red-400">
                                         <img src="./assets/images/img5.jpg" alt="" class="w-[977px]">
                                     </div>
-                                    <div class="carousel-cell w-full">
+                                    <div class="carousel-cell w-full bg-red-400">
                                         <img src="./assets/images/img6.jpg" alt="" class="w-[977px]">
                                     </div>
-                                    <div class="carousel-cell w-full">
+                                    <div class="carousel-cell w-full bg-red-400">
                                         <img src="./assets/images/img7.jpg" alt="" class="w-[977px]">
                                     </div>
                                 </div>
@@ -291,6 +294,8 @@
                     </div>
                     <!-- Slider End -->
                 </div>
+
+
             </div>
 
             <!-- Footer Section -->
@@ -317,7 +322,8 @@
                             pageDots: false,
                             draggable: true,
                             resize: false,
-                            adaptiveHeight: true
+                            adaptiveHeight: true,
+                            lazyLoad: true
 
                         });
                         flkty.on('change', i => this.active = i);
