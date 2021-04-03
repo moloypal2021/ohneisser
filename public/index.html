@@ -203,8 +203,8 @@
                         <div class="lg:w-5/12 md:w-4/12">
                             <div class="" x-data="carousel()" x-init="init()">
                                 <!-- Full Screen Slider Start -->
-                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 "
-                                    :class="show === 1 ? 'z-50 opacity-100' : '-z-1000 opacity-50 hidden'">
+                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
                                         id="carousel1" x-ref="carousel">
@@ -254,8 +254,8 @@
                         <div class="lg:w-5/12 md:w-4/12">
                             <div class="" x-data="carousel()" x-init="init()">
                                 <!-- Full Screen Slider Start -->
-                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 "
-                                    :class="show === 1 ? 'z-50 opacity-100' : '-z-1000 opacity-50 hidden'">
+                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
                                         id="carousel2" x-ref="carousel">
@@ -338,8 +338,8 @@
                         <div class="lg:w-5/12 md:w-4/12">
                             <div class="" x-data="carousel()" x-init="init()">
                                 <!-- Full Screen Slider Start -->
-                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 "
-                                    :class="show === 1 ? 'z-50 opacity-100' : '-z-1000 opacity-50 hidden'">
+                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
                                         id="carousel3" x-ref="carousel">
@@ -389,8 +389,8 @@
                         <div class="lg:w-5/12 md:w-4/12">
                             <div class="" x-data="carousel()" x-init="init()">
                                 <!-- Full Screen Slider Start -->
-                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 "
-                                    :class="show === 1 ? 'z-50 opacity-100' : '-z-1000 opacity-50 hidden'">
+                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
                                         id="carousel4" x-ref="carousel">
@@ -440,8 +440,8 @@
                         <div class="lg:w-5/12 md:w-4/12">
                             <div class="" x-data="carousel()" x-init="init()">
                                 <!-- Full Screen Slider Start -->
-                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 "
-                                    :class="show === 1 ? 'z-50 opacity-100' : '-z-1000 opacity-50 hidden'">
+                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
                                         id="carousel5" x-ref="carousel">
@@ -491,8 +491,8 @@
                         <div class="lg:w-5/12 md:w-4/12">
                             <div class="" x-data="carousel()" x-init="init()">
                                 <!-- Full Screen Slider Start -->
-                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 "
-                                    :class="show === 1 ? 'z-50 opacity-100' : '-z-1000 opacity-50 hidden'">
+                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
                                         id="carousel6" x-ref="carousel">
@@ -542,8 +542,8 @@
                         <div class="lg:w-5/12 md:w-4/12">
                             <div class="" x-data="carousel()" x-init="init()">
                                 <!-- Full Screen Slider Start -->
-                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 "
-                                    :class="show === 1 ? 'z-50 opacity-100' : '-z-1000 opacity-50 hidden'">
+                                <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto p-8 z-50"
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-[1000px] max-w-[1000px]" @click.away="show = 0"
                                         id="carousel7" x-ref="carousel">
@@ -621,7 +621,6 @@
                         if (this.show === 1) {
                             flkty = new Flickity(this.$refs.carousel);
                             flkty.resize();
-
                         }
                     },
                 }
