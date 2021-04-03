@@ -616,11 +616,13 @@
                             resize: true,
                             adaptiveHeight: true,
                             lazyLoad: false,
-                            imagesLoaded: true
-
                         });
-                        flkty.resize();
                         flkty.on('change', i => this.active = i);
+                        if (this.show === 1) {
+                            flkty = new Flickity(this.$refs.carousel);
+                            flkty.resize();
+                        }
+
 
                     },
                 }
