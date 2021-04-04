@@ -9,9 +9,6 @@ module.exports = {
       colors: {
         color: "#CEC5CF",
       },
-      zIndex: {
-        "-1000": "-1000",
-      },
     },
   },
   variants: {
