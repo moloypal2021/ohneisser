@@ -993,6 +993,10 @@ video {
 		line-height: 2.5rem;
 	}
 
+	.lg\:opacity-0 {
+		opacity: 0;
+	}
+
 	.group:hover .group-hover\:lg\:text-\[40px\] {
 		font-size: 40px;
 	}
