@@ -17,11 +17,12 @@
 
 <body>
     <main class="w-full h-screen overflow-hidden" x-data="{
-        popUp: false, openPage: 2}">
+        popUp: false, openPage: 1}">
         <!-- Pop up Section Start-->
         <section class="bg-color fixed inset-0 sm:p-8 py-8 px-4 overflow-hidden z-50" x-show="popUp">
             <div class="flex items-center justify-end">
-                <button @click="popUp = false" class="text-base font-black text-black focus:outline-none  mr-6">
+                <button @click="popUp = false"
+                    class="text-base font-black text-black focus:outline-none pb-8 pl-8 mr-6">
                     <svg class="fill-current text-[#202020] hover:text-[#A59DA6]" width="16" height="16" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -728,7 +729,8 @@
                         draggable: true,
                         resize: true,
                         adaptiveHeight: true,
-                        contain: true
+                        contain: true,
+                        bgLazyLoad: 1
                     });
                     flkty.on('change', i => this.active = i);
                 },
