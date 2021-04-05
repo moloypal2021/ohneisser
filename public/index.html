@@ -202,10 +202,10 @@
 
             <div class="flex items-center w-full h-full">
                 <div class="">
-                    <div class="flex flex-col lg:h-[400px] sm:h-[58vh] h-[61vh]  overflow-y-scroll overflow-x-hidden hide-scrollbar"
-                        x-data="infinity()" @scroll.self="scroll($event.target)" id="scroll-content">
+                    <div class="flex flex-col lg:h-[60vh] sm:h-[62vh] h-[61vh]  overflow-y-scroll overflow-x-hidden hide-scrollbar"
+                        x-data="infinity()" x-init="clone()" @scroll.self="scroll($event.target)" id="scroll-content">
                         <!-- Item 1  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-12 sm:mb-4 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -218,15 +218,15 @@
                                     <div class="z-50 w-full opacity-0 group-hover:opacity-100">
                                         <div class="flex" :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
                                             <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                                <img src="./assets/images/img1.jpg" alt="" @mouseover="select(0)"
+                                                <img src="./assets/images/img1.jpg" alt="" @mouseenter="select(0)"
                                                     class="w-[80px] h-[55px]">
                                             </div>
                                             <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                                <img src="./assets/images/img2.jpg" alt="" @mouseover="select(1)"
+                                                <img src="./assets/images/img2.jpg" alt="" @mouseenter="select(1)"
                                                     class="w-[80px] h-[55px]">
                                             </div>
                                             <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                                <img src="./assets/images/img3.jpg" alt="" @mouseover="select(2)"
+                                                <img src="./assets/images/img3.jpg" alt="" @mouseenter="select(2)"
                                                     class="w-[80px] h-[55px]">
                                             </div>
                                         </div>
@@ -236,7 +236,7 @@
 
                                     <!-- Full Screen Slider Start  :class="{'z-[-1000] opacity-0 absolute' : show === 0}" -->
                                     <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                        x-show="show === 1 ">
+                                        :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
                                         <!-- Set Unique ID For Each Slider -->
                                         <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                             id="carousel1" x-ref="carousel">
@@ -262,7 +262,7 @@
                         <!-- Item 1  -->
 
                         <!-- Item 2  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-12 sm:mb-4 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -275,24 +275,24 @@
                                     <div class="flex overflow-x-auto hide-scrollbar w-full"
                                         :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/Mockup-min.jpg" alt="" @mouseover="select(0)"
+                                            <img src="./assets/images/Mockup-min.jpg" alt="" @mouseenter="select(0)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/Mockup2-min.jpg" alt="" @mouseover="select(1)"
+                                            <img src="./assets/images/Mockup2-min.jpg" alt="" @mouseenter="select(1)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/Mockup3-min.jpg" alt="" @mouseover="select(2)"
+                                            <img src="./assets/images/Mockup3-min.jpg" alt="" @mouseenter="select(2)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/Mockup4-min.jpg" alt="" @mouseover="select(3)"
+                                            <img src="./assets/images/Mockup4-min.jpg" alt="" @mouseenter="select(3)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/Top View Grid-min.jpg" alt=""
-                                                @mouseover="select(4)" class="w-[80px] h-[55px]">
+                                                @mouseenter="select(4)" class="w-[80px] h-[55px]">
                                         </div>
                                     </div>
                                 </div>
@@ -301,7 +301,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    x-show="show === 1 ">
+                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -334,7 +334,7 @@
                         <!-- Item 2  -->
 
                         <!-- Item 3  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-12 sm:mb-4 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -347,40 +347,40 @@
                                     <div class="flex overflow-x-auto hide-scrollbar w-full"
                                         :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/north/3-min.jpg" alt="" @mouseover="select(0)"
+                                            <img src="./assets/images/north/3-min.jpg" alt="" @mouseenter="select(0)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/north/4-min.jpg" alt="" @mouseover="select(1)"
+                                            <img src="./assets/images/north/4-min.jpg" alt="" @mouseenter="select(1)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/north/7-min.jpg" alt="" @mouseover="select(2)"
+                                            <img src="./assets/images/north/7-min.jpg" alt="" @mouseenter="select(2)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/north/8-min.jpg" alt="" @mouseover="select(3)"
+                                            <img src="./assets/images/north/8-min.jpg" alt="" @mouseenter="select(3)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/north/12-min.jpg" alt="" @mouseover="select(4)"
+                                            <img src="./assets/images/north/12-min.jpg" alt="" @mouseenter="select(4)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/north/13-min.jpg" alt="" @mouseover="select(5)"
+                                            <img src="./assets/images/north/13-min.jpg" alt="" @mouseenter="select(5)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/north/Dokumentation_Andries_Ohneisser (1)-21-min.jpg"
-                                                alt="" @mouseover="select(6)" class="w-[80px] h-[55px]">
+                                                alt="" @mouseenter="select(6)" class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/north/Dokumentation_Andries_Ohneisser (1)-22-min.jpg"
-                                                alt="" @mouseover="select(7)" class="w-[80px] h-[55px]">
+                                                alt="" @mouseenter="select(7)" class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/north/Dokumentation_Andries_Ohneisser (1)-25-min.jpg"
-                                                alt="" @mouseover="select(8)" class="w-[80px] h-[55px]">
+                                                alt="" @mouseenter="select(8)" class="w-[80px] h-[55px]">
                                         </div>
 
                                     </div>
@@ -390,7 +390,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    x-show="show === 1 ">
+                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -439,7 +439,7 @@
                         <!-- Item 3  -->
 
                         <!-- Item 4  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-12 sm:mb-4 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -452,16 +452,16 @@
                                     <div class="flex overflow-x-auto hide-scrollbar w-full"
                                         :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/hey/1-min.jpg" alt="" @mouseover="select(0)"
+                                            <img src="./assets/images/hey/1-min.jpg" alt="" @mouseenter="select(0)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/hey/2-min.jpg" alt="" @mouseover="select(1)"
+                                            <img src="./assets/images/hey/2-min.jpg" alt="" @mouseenter="select(1)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/hey/ezgif.com-optimize.gif" alt=""
-                                                @mouseover="select(2)" class="w-[80px] h-[55px]">
+                                                @mouseenter="select(2)" class="w-[80px] h-[55px]">
                                         </div>
 
                                     </div>
@@ -471,7 +471,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    x-show="show === 1 ">
+                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -496,7 +496,7 @@
                         <!-- Item 4  -->
 
                         <!-- Item 5  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-12 sm:mb-4 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -509,24 +509,24 @@
                                     <div class="flex overflow-x-auto hide-scrollbar w-full"
                                         :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/donar/Dönar1-min.jpg" @mouseover="select(0)"
+                                            <img src="./assets/images/donar/Dönar1-min.jpg" @mouseenter="select(0)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/donar/Dönar2-min.jpg" alt=""
-                                                @mouseover="select(1)" class="w-[80px] h-[55px]">
+                                                @mouseenter="select(1)" class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/donar/dönar3-min.jpg" alt=""
-                                                @mouseover="select(2)" class="w-[80px] h-[55px]">
+                                                @mouseenter="select(2)" class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/donar/dönar4-min.jpg" alt=""
-                                                @mouseover="select(3)" class="w-[80px] h-[55px]">
+                                                @mouseenter="select(3)" class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/donar/dönar5-min.jpg" alt=""
-                                                @mouseover="select(4)" class="w-[80px] h-[55px]">
+                                                @mouseenter="select(4)" class="w-[80px] h-[55px]">
                                         </div>
                                     </div>
                                 </div>
@@ -535,7 +535,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    x-show="show === 1 ">
+                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -570,7 +570,7 @@
                         <!-- Item 5  -->
 
                         <!-- Item 6  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-12 sm:mb-4 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -583,23 +583,23 @@
                                     <div class="flex overflow-x-auto hide-scrollbar w-full"
                                         :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/devio/1-min.jpg" @mouseover="select(0)"
+                                            <img src="./assets/images/devio/1-min.jpg" @mouseenter="select(0)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/devio/2-min.jpg" alt="" @mouseover="select(1)"
+                                            <img src="./assets/images/devio/2-min.jpg" alt="" @mouseenter="select(1)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/devio/3-min.gif" alt="" @mouseover="select(2)"
+                                            <img src="./assets/images/devio/3-min.gif" alt="" @mouseenter="select(2)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/devio/3-min.jpg" alt="" @mouseover="select(3)"
+                                            <img src="./assets/images/devio/3-min.jpg" alt="" @mouseenter="select(3)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/devio/4-min.gif" alt="" @mouseover="select(4)"
+                                            <img src="./assets/images/devio/4-min.gif" alt="" @mouseenter="select(4)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                     </div>
@@ -609,7 +609,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    x-show="show === 1 ">
+                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -644,7 +644,7 @@
                         <!-- Item 6  -->
 
                         <!-- Item 7  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-12 sm:mb-4 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-6 sm:mb-4 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -660,7 +660,7 @@
                                             <img src="./assets/images/burger/1-min.jpg" class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/burger/2-min.jpg" alt="" @mouseover="select(1)"
+                                            <img src="./assets/images/burger/2-min.jpg" alt="" @mouseenter="select(1)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
                                     </div>
@@ -670,7 +670,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    x-show="show === 1 ">
+                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -689,6 +689,7 @@
                             <!-- Slider End -->
                         </div>
                         <!-- Item 7  -->
+
 
                     </div>
                 </div>
@@ -717,8 +718,7 @@
             return {
                 active: 0,
                 show: 0,
-                init(props) {
-                    // this.show = 1;
+                init() {
                     var carousel = this.$refs.carousel;
                     var flkty = new Flickity(this.$refs.carousel, {
                         wrapAround: false,
@@ -731,13 +731,12 @@
                         contain: true
                     });
                     flkty.on('change', i => this.active = i);
-                    // flkty.select(props);
-
                 },
                 select(props) {
                     var flkty = new Flickity(this.$refs.carousel);
                     flkty.select(props);
                     this.show = 1;
+
                 },
                 hide() {
                     this.show = 0;
@@ -750,24 +749,27 @@
 
         function infinity() {
             return {
+                clone() {
+                    var parent = this.$el;
+                    NodeList.prototype.forEach = Array.prototype.forEach;
+                    var children = parent.childNodes;
+                    children.forEach(function (item) {
+                        var cln = item.cloneNode(true);
+                        parent.appendChild(cln);
+                    });
+                },
                 scroll(el) {
-                    console.log(this.$event)
                     var element = el;
                     var lastDiv = document.querySelector("#scroll-content > div:last-child");
                     var lastDivOffset = lastDiv.offsetTop + lastDiv.clientHeight;
                     var elementOffset = element.scrollTop + element.clientHeight;
 
                     if (elementOffset > lastDiv.offsetTop - 300) {
-                        console.log(elementOffset)
-                        console.log('down')
                         element.append(element.firstElementChild);
                     }
 
                     if (element.scrollTop < lastDiv.clientHeight - 10) {
                         element.prepend(element.lastElementChild);
-                        console.log("Up")
-                        // console.log(element.scrollTop)
-                        console.log(lastDivOffset)
                     }
                 }
             }
