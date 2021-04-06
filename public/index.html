@@ -204,7 +204,7 @@
                     <div class="flex flex-col lg:h-[60vh] sm:h-[62vh] h-[61vh]  overflow-y-scroll overflow-x-hidden hide-scrollbar"
                         x-data="infinity()" x-init="clone()" @scroll.self="scroll($event.target)" id="scroll-content">
                         <!-- Item 1  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center sm:py-3 py-1 lg:mb-4 sm:mb-2 mb-1 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
@@ -214,7 +214,8 @@
                             <div class="">
                                 <div class="">
                                     <!-- Text side Slider Nav Start -->
-                                    <div class="z-50 w-full opacity-0 group-hover:opacity-100">
+                                    <div
+                                        class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                         <div class="flex" :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
                                             <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                                 <img src="./assets/images/img1.jpg" alt="" @mouseenter="select(0)"
@@ -261,7 +262,7 @@
                         <!-- Item 1  -->
 
                         <!-- Item 2  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center sm:py-3 py-1 lg:mb-4 sm:mb-2 mb-1 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
@@ -270,9 +271,10 @@
                             <!-- Slider Start -->
                             <div class="w-full">
                                 <!-- Text side Slider Nav Start -->
-                                <div class="z-50 w-full opacity-0 group-hover:opacity-100">
-                                    <div class="flex overflow-x-auto hide-scrollbar w-full"
-                                        :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
+                                <div
+                                    class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                    <div class="flex w-full" :class="{'md:opacity-0' : show === 1}"
+                                        @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/Mockup-min.jpg" alt="" @mouseenter="select(0)"
                                                 class="w-[80px] h-[55px]">
@@ -333,7 +335,7 @@
                         <!-- Item 2  -->
 
                         <!-- Item 3  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center sm:py-3 py-1 lg:mb-4 sm:mb-2 mb-1 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
@@ -342,9 +344,10 @@
                             <!-- Slider Start -->
                             <div class="w-full">
                                 <!-- Text side Slider Nav Start -->
-                                <div class="z-50 w-full opacity-0 group-hover:opacity-100">
-                                    <div class="flex overflow-x-auto hide-scrollbar w-full"
-                                        :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
+                                <div
+                                    class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                    <div class="flex w-full" :class="{'md:opacity-0' : show === 1}"
+                                        @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/north/3-min.jpg" alt="" @mouseenter="select(0)"
                                                 class="w-[80px] h-[55px]">
@@ -438,7 +441,7 @@
                         <!-- Item 3  -->
 
                         <!-- Item 4  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center sm:py-3 py-1 lg:mb-4 sm:mb-2 mb-1 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
@@ -447,9 +450,10 @@
                             <!-- Slider Start -->
                             <div class="w-full">
                                 <!-- Text side Slider Nav Start -->
-                                <div class="z-50 w-full opacity-0 group-hover:opacity-100">
-                                    <div class="flex overflow-x-auto hide-scrollbar w-full"
-                                        :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
+                                <div
+                                    class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                    <div class="flex w-full" :class="{'md:opacity-0' : show === 1}"
+                                        @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/hey/1-min.jpg" alt="" @mouseenter="select(0)"
                                                 class="w-[80px] h-[55px]">
@@ -495,7 +499,7 @@
                         <!-- Item 4  -->
 
                         <!-- Item 5  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center sm:py-3 py-1 lg:mb-4 sm:mb-2 mb-1 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
@@ -504,9 +508,10 @@
                             <!-- Slider Start -->
                             <div class="w-full">
                                 <!-- Text side Slider Nav Start -->
-                                <div class="z-50 w-full opacity-0 group-hover:opacity-100">
-                                    <div class="flex overflow-x-auto hide-scrollbar w-full"
-                                        :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
+                                <div
+                                    class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                    <div class="flex w-full" :class="{'md:opacity-0' : show === 1}"
+                                        @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/donar/Dönar1-min.jpg" @mouseenter="select(0)"
                                                 class="w-[80px] h-[55px]">
@@ -569,7 +574,7 @@
                         <!-- Item 5  -->
 
                         <!-- Item 6  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center sm:py-3 py-1 lg:mb-4 sm:mb-2 mb-1 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
@@ -578,9 +583,10 @@
                             <!-- Slider Start -->
                             <div class="w-full">
                                 <!-- Text side Slider Nav Start -->
-                                <div class="z-50 w-full opacity-0 group-hover:opacity-100">
-                                    <div class="flex overflow-x-auto hide-scrollbar w-full"
-                                        :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
+                                <div
+                                    class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                    <div class="flex w-full" :class="{'md:opacity-0' : show === 1}"
+                                        @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/devio/1-min.jpg" @mouseenter="select(0)"
                                                 class="w-[80px] h-[55px]">
@@ -643,7 +649,7 @@
                         <!-- Item 6  -->
 
                         <!-- Item 7  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center sm:py-3 py-1 lg:mb-4 sm:mb-2 mb-1 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
@@ -652,9 +658,10 @@
                             <!-- Slider Start -->
                             <div class="w-full">
                                 <!-- Text side Slider Nav Start -->
-                                <div class="z-50 w-full opacity-0 group-hover:opacity-100">
-                                    <div class="flex overflow-x-auto hide-scrollbar w-full"
-                                        :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
+                                <div
+                                    class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                    <div class="flex w-full" :class="{'md:opacity-0' : show === 1}"
+                                        @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/burger/1-min.jpg" @mouseenter="select(0)"
                                                 class="w-[80px] h-[55px]">
