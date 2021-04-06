@@ -14,10 +14,10 @@
 </head>
 
 <body>
-    <main class="w-full h-screen overflow-hidden" x-data="{
+    <main class="bg-color w-full h-screen overflow-hidden relative" x-data="{
         popUp: false, openPage: 1}">
         <!-- Pop up Section Start-->
-        <section class="bg-color fixed inset-0 sm:p-8  px-4 overflow-hidden z-50" x-show="popUp">
+        <section class="bg-color fixed inset-0 sm:p-8 px-4 overflow-hidden z-50" x-show="popUp">
             <button @click="popUp = false"
                 class="text-base font-black text-black focus:outline-none pb-8 pl-8 fixed right-12 top-8 z-50">
                 <svg class="fill-current text-[#202020] hover:text-[#A59DA6]" width="16" height="16" fill="none"
@@ -136,10 +136,8 @@
         </section>
         <!-- Pop up Section End-->
 
-        <!-- Index Page Section Start -->
-        <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 relative transition duration-700 ease-in-out"
-            :class="{'transform -translate-y-full' : openPage === 2 }">
-            <!-- Main Section Start -->
+        <!-- Nav -->
+        <div class="sm:p-8 py-8 px-4 fixed top-0 inset-x-0 z-20">
             <nav class="flex items-center justify-between">
                 <div class="flex space-x-8">
                     <p @click="openPage = 1"
@@ -153,7 +151,10 @@
                 <button @click="popUp = true"
                     class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black focus:outline-none hover:text-[#A59DA6]">IMPRINT</button>
             </nav>
-
+        </div>
+        <!-- Index Page Section Start -->
+        <div class="w-full h-full sm:p-8 py-8 px-4 relative transition duration-700 ease-in-out">
+            <!-- Video -->
             <div class="flex items-center justify-center w-full h-full">
                 <div class="" @click="openPage = 2">
                     <video
@@ -163,43 +164,21 @@
             </div>
 
             <!-- ohneisser text Section -->
-            <section class="absolute bottom-16 inset-x-0 sm:px-6 px-4 flex justify-start items-center ">
+            <section
+                class="absolute bottom-0 pb-16 inset-x-0 sm:px-6 px-4 flex justify-start items-center transition duration-700 ease-in"
+                :class="{'transform translate-y-[-100vh]' : openPage === 2 }">
                 <img src="./assets/images/ohneisser.svg" alt=""
-                    class="sm:min-w-[1389px] min-w-[1280px] w-full transform lg:translate-x-0 -translate-x-32">
+                    class="lg:min-w-[1389px] sm:min-w-[1783px] min-w-[1530px] w-full transform lg:translate-x-0 -translate-x-32">
             </section>
-
-            <!-- Footer Section -->
-            <footer class="absolute bottom-5 z-0">
-                <a href="#" class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black">ANDRIES DEMY
-                    OHNEISSER | CREATIVE |
-                    DIGITAL
-                    PORTFOLIO</a>
-            </footer>
             <!-- Main Section End -->
-
         </div>
         <!-- Index Page Section End -->
 
         <!-- Second Page Section Start -->
-        <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 relative transition duration-700 ease-in-out relative"
+        <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 relative transition duration-700 ease-in relative"
             :class="{'transform -translate-y-full' : openPage === 2 }">
-            <!-- Nav Section Start -->
-            <nav class="flex items-center justify-between">
-                <div class="flex space-x-8">
-                    <p @click="openPage = 1"
-                        class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black hover:text-[#A59DA6] cursor-pointer">
-                        OHNEISSER
-                    </p>
-                    <p @click="openPage = 2"
-                        class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black hover:text-[#A59DA6] cursor-pointer">
-                        WORK</p>
-                </div>
-                <button @click="popUp = true"
-                    class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black focus:outline-none hover:text-[#A59DA6]">IMPRINT</button>
-            </nav>
-
             <div class="flex items-center w-full h-full">
-                <div class="flex flex-col lg:h-[60vh] sm:h-[62vh] h-[61vh]  overflow-y-scroll overflow-x-hidden hide-scrollbar w-screen"
+                <div class="flex flex-col lg:h-[60vh] sm:h-[62vh] h-[68vh]  overflow-y-scroll overflow-x-hidden hide-scrollbar w-screen"
                     x-data="infinity()" x-init="clone()" @scroll.self="scroll($event.target)" id="scroll-content">
                     <!-- Item 1  -->
                     <div class="group flex lg:flex-row flex-col lg:items-center md:py-5 sm:py-3 py-3 w-full static"
@@ -212,7 +191,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/img1.jpg" alt="" @mouseenter="select(0)"
@@ -267,7 +246,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/Mockup-min.jpg" alt="" @mouseenter="select(0)"
@@ -338,7 +317,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/north/3-min.jpg" alt="" @mouseenter="select(0)"
@@ -443,7 +422,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/hey/1-min.jpg" alt="" @mouseenter="select(0)"
@@ -500,7 +479,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/donar/Dönar1-min.jpg" @mouseenter="select(0)"
@@ -574,7 +553,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/devio/1-min.jpg" @mouseenter="select(0)"
@@ -648,7 +627,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/burger/1-min.jpg" @mouseenter="select(0)"
@@ -689,16 +668,17 @@
 
                 </div>
             </div>
-
-            <!-- Footer Section -->
-            <footer class="absolute bottom-5 z-0">
-                <a href="#" class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black">ANDRIES DEMY
-                    OHNEISSER | CREATIVE |
-                    DIGITAL
-                    PORTFOLIO</a>
-            </footer>
         </div>
         <!-- Second Page Section Start -->
+
+
+        <!-- Footer Section -->
+        <footer class="sm:px-8 py-4 px-4 fixed bottom-0 inset-x-0 z-20">
+            <a href="#" class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black">ANDRIES DEMY
+                OHNEISSER | CREATIVE |
+                DIGITAL
+                PORTFOLIO</a>
+        </footer>
     </main>
 
     <!-- Flickity.js -->
