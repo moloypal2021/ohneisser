@@ -157,9 +157,9 @@
 
             <div class="flex items-center justify-center w-full h-full">
                 <div class="lg:w-[62vw] lg:h-[46.5vh] sm:w-[78vw] sm:h-[31.3vh] w-full h-[214px] bg-[#816087]"
-                    @click="openPage = 2">
+                    @mouseenter="openPage = 2">
                     <video class="lg:w-[62vw] lg:h-[46.5vh] sm:w-[78vw] sm:h-[31.3vh] w-full h-[214px]  object-cover"
-                        width="800px" height="300px" controls loop autoplay
+                        width="1920px" height="1080px" controls loop autoplay
                         src="./assets/images/Komp 3_1(1).mp4"></video>
                 </div>
             </div>
@@ -167,7 +167,7 @@
             <!-- ohneisser text Section -->
             <section class="absolute bottom-16 inset-x-0 sm:px-6 px-4 flex justify-start items-center overflow-hidden ">
                 <img src="./assets/images/ohneisser.svg" alt=""
-                    class="min-w-[1389px] w-full transform lg:translate-x-0 -translate-x-32">
+                    class="sm:min-w-[1389px] min-w-[1280px] w-full transform lg:translate-x-0 -translate-x-32">
             </section>
 
             <!-- Footer Section -->
@@ -204,7 +204,7 @@
                     <div class="flex flex-col lg:h-[60vh] sm:h-[62vh] h-[61vh]  overflow-y-scroll overflow-x-hidden hide-scrollbar"
                         x-data="infinity()" x-init="clone()" @scroll.self="scroll($event.target)" id="scroll-content">
                         <!-- Item 1  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -261,7 +261,7 @@
                         <!-- Item 1  -->
 
                         <!-- Item 2  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -333,7 +333,7 @@
                         <!-- Item 2  -->
 
                         <!-- Item 3  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -438,7 +438,7 @@
                         <!-- Item 3  -->
 
                         <!-- Item 4  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -495,7 +495,7 @@
                         <!-- Item 4  -->
 
                         <!-- Item 5  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -569,7 +569,7 @@
                         <!-- Item 5  -->
 
                         <!-- Item 6  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-4 sm:mb-2 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
@@ -643,7 +643,7 @@
                         <!-- Item 6  -->
 
                         <!-- Item 7  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center pb-5 lg:mb-6 sm:mb-4 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-6 sm:mb-4 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
                                 class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
