@@ -17,56 +17,55 @@
     <main class="w-full h-screen overflow-hidden" x-data="{
         popUp: false, openPage: 1}">
         <!-- Pop up Section Start-->
-        <section class="bg-color fixed inset-0 sm:p-8 py-8 px-4 overflow-hidden z-50" x-show="popUp">
-            <div class="flex items-center justify-end">
-                <button @click="popUp = false"
-                    class="text-base font-black text-black focus:outline-none pb-8 pl-8 mr-6">
-                    <svg class="fill-current text-[#202020] hover:text-[#A59DA6]" width="16" height="16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M15.5 2.643L13.357.5 8 5.857 2.643.5.5 2.643 5.857 8 .5 13.357 2.643 15.5 8 10.143l5.357 5.357 2.143-2.143L10.143 8 15.5 2.643z"
-                            fill="" />
-                    </svg>
-                </button>
-            </div>
+        <section class="bg-color fixed inset-0 sm:p-8  px-4 overflow-hidden z-50" x-show="popUp">
+            <button @click="popUp = false"
+                class="text-base font-black text-black focus:outline-none pb-8 pl-8 fixed right-8 top-8 z-50">
+                <svg class="fill-current text-[#202020] hover:text-[#A59DA6]" width="16" height="16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15.5 2.643L13.357.5 8 5.857 2.643.5.5 2.643 5.857 8 .5 13.357 2.643 15.5 8 10.143l5.357 5.357 2.143-2.143L10.143 8 15.5 2.643z"
+                        fill="" />
+                </svg>
+            </button>
 
             <div class="flex items-center justify-center w-full h-full xl:px-20 lg:px-12">
-                <div class="grid lg:grid-cols-2 xl:gap-20 lg:gap-12 gap-6 lg:max-w-6xl max-w-xl mx-auto">
+                <div
+                    class="grid lg:grid-cols-2 xl:gap-20 lg:gap-12 gap-2 lg:max-w-6xl md:max-w-3xl max-w-xl mx-auto py-10">
                     <div class="xl:pr-5">
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Impressum
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Angaben gemäß § 5 TMG
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Andries Ohneisser
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Raitelsbergstrasse, 50a
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             70188 Stuttgart
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Kontakt
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Telefon: 017663632703
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             E-Mail: andries.ohneisser@gmail.com
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Redaktionell Verantwortlicher
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%] mb-6">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%] md:mb-6 mb-2">
                             Andries Ohneisser
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Haftung für Inhalte
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten
                             nach
                             den
@@ -77,7 +76,7 @@
                             Umständen zu
                             forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den
                             allgemeinen
                             Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem
@@ -88,10 +87,10 @@
                         </p>
                     </div>
                     <div class="">
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Haftung für Links
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%] mb-6">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%] md:mb-6 mb-2">
                             Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen
                             Einfluss haben.
                             Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die
@@ -108,10 +107,10 @@
                             Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
                             derartige Linksumgehend entfernen.
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Urheberrecht
                         </p>
-                        <p class="sm:text-[13px] text-xs text-black tracking-[-3%]">
+                        <p class="sm:text-[13px] text-[11px] text-black tracking-[-3%]">
                             Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
                             dem
                             deutschen
@@ -144,15 +143,15 @@
             <nav class="flex items-center justify-between">
                 <div class="flex space-x-8">
                     <p @click="openPage = 1"
-                        class="sm:text-[15px] text-[13px] font-black text-black hover:text-[#A59DA6] cursor-pointer">
+                        class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black hover:text-[#A59DA6] cursor-pointer">
                         OHNEISSER
                     </p>
                     <p @click="openPage = 2"
-                        class="sm:text-[15px] text-[13px] font-black text-black hover:text-[#A59DA6] cursor-pointer">
+                        class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black hover:text-[#A59DA6] cursor-pointer">
                         WORK</p>
                 </div>
                 <button @click="popUp = true"
-                    class="sm:text-[15px] text-[13px] font-black text-black focus:outline-none hover:text-[#A59DA6]">IMPRINT</button>
+                    class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black focus:outline-none hover:text-[#A59DA6]">IMPRINT</button>
             </nav>
 
             <div class="flex items-center justify-center w-full h-full">
@@ -172,7 +171,8 @@
 
             <!-- Footer Section -->
             <footer class="absolute bottom-5 z-0">
-                <a href="#" class="sm:text-[15px] text-[13px] font-black text-black">ANDRIES DEMY OHNEISSER | CREATIVE |
+                <a href="#" class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black">ANDRIES DEMY
+                    OHNEISSER | CREATIVE |
                     DIGITAL
                     PORTFOLIO</a>
             </footer>
@@ -188,15 +188,15 @@
             <nav class="flex items-center justify-between">
                 <div class="flex space-x-8">
                     <p @click="openPage = 1"
-                        class="sm:text-[15px] text-[13px] font-black text-black hover:text-[#A59DA6] cursor-pointer">
+                        class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black hover:text-[#A59DA6] cursor-pointer">
                         OHNEISSER
                     </p>
                     <p @click="openPage = 2"
-                        class="sm:text-[15px] text-[13px] font-black text-black hover:text-[#A59DA6] cursor-pointer">
+                        class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black hover:text-[#A59DA6] cursor-pointer">
                         WORK</p>
                 </div>
                 <button @click="popUp = true"
-                    class="sm:text-[15px] text-[13px] font-black text-black focus:outline-none hover:text-[#A59DA6]">IMPRINT</button>
+                    class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black focus:outline-none hover:text-[#A59DA6]">IMPRINT</button>
             </nav>
 
             <div class="flex items-center w-full h-full">
@@ -207,7 +207,7 @@
                         <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
-                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
+                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
                                 ceramic supplier | INFO SITE
                             </h1>
                             <!-- Slider Start -->
@@ -235,7 +235,7 @@
 
                                     <!-- Full Screen Slider Start  :class="{'z-[-1000] opacity-0 absolute' : show === 0}" -->
                                     <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                        :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
+                                        x-show="show === 1">
                                         <!-- Set Unique ID For Each Slider -->
                                         <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                             id="carousel1" x-ref="carousel">
@@ -264,7 +264,7 @@
                         <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
-                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
+                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
                                 XOHN | AUGMENTED REALITY SITE
                             </h1>
                             <!-- Slider Start -->
@@ -300,7 +300,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -336,7 +336,7 @@
                         <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
-                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
+                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
                                 THE NORTH FACE | MOTION DESIGN
                             </h1>
                             <!-- Slider Start -->
@@ -389,7 +389,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -441,7 +441,7 @@
                         <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
-                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
+                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
                                 HAY | 3d ADVertisement
                             </h1>
                             <!-- Slider Start -->
@@ -470,7 +470,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -498,7 +498,7 @@
                         <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
-                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
+                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
                                 Dönar | web presence
                             </h1>
                             <!-- Slider Start -->
@@ -534,7 +534,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -572,7 +572,7 @@
                         <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
-                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
+                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
                                 Devio | corporate design
                             </h1>
                             <!-- Slider Start -->
@@ -608,7 +608,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -643,10 +643,10 @@
                         <!-- Item 6  -->
 
                         <!-- Item 7  -->
-                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-6 sm:mb-4 mb-3 w-full static"
+                        <div class="group flex lg:flex-row flex-col lg:items-center py-3 lg:mb-4 sm:mb-2 mb-3 w-full static"
                             x-data="carousel()" x-init="init()">
                             <h1
-                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-2]">
+                                class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-[-5]">
                                 monolo | vintage online shop
                             </h1>
                             <!-- Slider Start -->
@@ -656,12 +656,14 @@
                                     <div class="flex overflow-x-auto hide-scrollbar w-full"
                                         :class="{'md:opacity-0' : show === 1}" @mouseleave="hide()">
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
-                                            <img src="./assets/images/burger/1-min.jpg" class="w-[80px] h-[55px]">
+                                            <img src="./assets/images/burger/1-min.jpg" @mouseenter="select(0)"
+                                                class="w-[80px] h-[55px]">
                                         </div>
                                         <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]">
                                             <img src="./assets/images/burger/2-min.jpg" alt="" @mouseenter="select(1)"
                                                 class="w-[80px] h-[55px]">
                                         </div>
+
                                     </div>
                                 </div>
                                 <!-- Text side Slider Nav End -->
@@ -669,7 +671,7 @@
 
                                 <!-- Full Screen Slider Start -->
                                 <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
-                                    :class="{'z-[-1000] opacity-0 absolute' : show === 0}">
+                                    x-show="show === 1">
                                     <!-- Set Unique ID For Each Slider -->
                                     <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
                                         id="carousel1" x-ref="carousel">
@@ -681,13 +683,17 @@
                                             <img src="./assets/images/burger/2-min.jpg" alt=""
                                                 class="w-full max-h-[80vh] object-contain object-center ">
                                         </div>
+
                                     </div>
                                 </div>
                                 <!-- Full Screen Slider End -->
+
+
                             </div>
                             <!-- Slider End -->
                         </div>
                         <!-- Item 7  -->
+
 
 
                     </div>
@@ -696,7 +702,8 @@
 
             <!-- Footer Section -->
             <footer class="absolute bottom-5 z-0">
-                <a href="#" class="sm:text-[15px] text-[13px] font-black text-black">ANDRIES DEMY OHNEISSER | CREATIVE |
+                <a href="#" class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black">ANDRIES DEMY
+                    OHNEISSER | CREATIVE |
                     DIGITAL
                     PORTFOLIO</a>
             </footer>
@@ -731,9 +738,15 @@
                     flkty.on('change', i => this.active = i);
                 },
                 select(props) {
+                    this.show = 1;
                     var flkty = new Flickity(this.$refs.carousel);
                     flkty.select(props);
-                    this.show = 1;
+
+                    setTimeout(() => {
+                        flkty.resize();
+                    }, 100);
+
+
 
                 },
                 hide() {

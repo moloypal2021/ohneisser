@@ -2,13 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-    font-family: 'Univers';
-    src: local('Univers'), url(../font/UniversNextProCondensed.ttf) format('ttf'), url(../font/UniversNextProHeavyCondensed.ttf);
+    font-family: 'Univers Next Pro Medium Condensed';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Univers Next Pro Medium Condensed'), url('../font/Univers Next Pro Medium Condensed.woff') format('woff');
 }
 
 @layer base {
     body {
-        font-family: 'Univers';
+        font-family: 'Univers Next Pro Medium Condensed';
     }
 }
 
