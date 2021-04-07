@@ -165,8 +165,8 @@
 
             <!-- ohneisser text Section -->
             <section
-                class="absolute bottom-0 pb-16 inset-x-0 sm:px-6 px-4 flex justify-start items-center transition duration-700 ease-in"
-                :class="{'transform translate-y-[-100vh]' : openPage === 2 }">
+                class="absolute bottom-0 pb-16 inset-x-0 sm:px-6 px-4 flex justify-start items-center transition duration-1000 ease-in"
+                :class="{'transform scale-0' : openPage === 2 }">
                 <img src="./assets/images/ohneisser.svg" alt=""
                     class="lg:min-w-[1389px] sm:min-w-[1783px] min-w-[1530px] w-full transform lg:translate-x-0 -translate-x-32">
             </section>
@@ -176,7 +176,7 @@
 
         <!-- Second Page Section Start -->
         <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 relative transition duration-700 ease-in relative"
-            :class="{'transform -translate-y-full' : openPage === 2 }">
+            :class="{'transform -translate-y-full delay-500' : openPage === 2 }">
             <div class="flex items-center w-full h-full">
                 <div class="flex flex-col lg:h-[60vh] sm:h-[62vh] h-[68vh] hide-scrollbar overflow-y-scroll overflow-x-hidden  w-screen"
                     x-data="infinity()" x-init="clone()" @scroll.self="scroll($event.target)" id="scroll-content">
@@ -191,17 +191,20 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-[500] min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex" :class="{'md:opacity-0' : show === 1}">
-                                    <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
+                                    <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] mouse-hover"
+                                        @mouseleave="hide()">
                                         <img src="./assets/images/img1.jpg" alt="" @mouseenter="select(0)"
                                             class="w-[80px] h-[55px]">
                                     </div>
-                                    <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
+                                    <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] mouse-hover"
+                                        @mouseleave="hide()">
                                         <img src="./assets/images/img2.jpg" alt="" @mouseenter="select(1)"
                                             class="w-[80px] h-[55px]">
                                     </div>
-                                    <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
+                                    <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] mouse-hover"
+                                        @mouseleave="hide()">
                                         <img src="./assets/images/img3.jpg" alt="" @mouseenter="select(2)"
                                             class="w-[80px] h-[55px]">
                                     </div>
@@ -210,11 +213,11 @@
                             <!-- Text side Slider Nav End -->
 
                             <!-- Full Screen Slider Start  :class="{'z-[-1000] opacity-0 absolute' : show === 0}" -->
-                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[5] overflow-hidden parallaxed"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
-                                    id="carousel1" x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]" id="carousel1"
+                                    x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/img1.jpg" alt=""
                                             class="w-full max-h-[80vh] object-contain object-center">
@@ -246,7 +249,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-[500] min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/Mockup-min.jpg" alt="" @mouseenter="select(0)"
@@ -273,7 +276,7 @@
                             <!-- Text side Slider Nav End -->
 
                             <!-- Full Screen Slider Start -->
-                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[5]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
                                 <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
@@ -317,7 +320,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-[500] min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/north/3-min.jpg" alt="" @mouseenter="select(0)"
@@ -362,7 +365,7 @@
 
 
                             <!-- Full Screen Slider Start -->
-                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[5]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
                                 <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
@@ -422,7 +425,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-[500] min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/hey/1-min.jpg" alt="" @mouseenter="select(0)"
@@ -443,7 +446,7 @@
 
 
                             <!-- Full Screen Slider Start -->
-                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[5]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
                                 <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
@@ -479,7 +482,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-[500] min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/donar/Dönar1-min.jpg" @mouseenter="select(0)"
@@ -507,7 +510,7 @@
 
 
                             <!-- Full Screen Slider Start -->
-                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[5]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
                                 <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
@@ -553,7 +556,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-[500] min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/devio/1-min.jpg" @mouseenter="select(0)"
@@ -581,7 +584,7 @@
 
 
                             <!-- Full Screen Slider Start -->
-                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[5]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
                                 <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
@@ -627,7 +630,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="z-50 min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="z-[500] min-w-[400px] lg:w-full w-11/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full" :class="{'md:opacity-0' : show === 1}">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px]" @mouseleave="hide()">
                                         <img src="./assets/images/burger/1-min.jpg" @mouseenter="select(0)"
@@ -643,7 +646,7 @@
                             <!-- Text side Slider Nav End -->
 
                             <!-- Full Screen Slider Start -->
-                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
+                            <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[5]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
                                 <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
@@ -762,7 +765,7 @@
 
         b.addEventListener("mousemove", function (event) {
             parallaxed(event);
-            parallaxedImg(event);
+            // parallaxedImg(event);
 
         });
 
@@ -776,15 +779,31 @@
             }
         }
 
-        function parallaxedImg(e) {
-            var amountMovedX = (e.clientX * -0.2 / 5);
-            var amountMovedY = (e.clientY * -0.2 / 5);
-            var x = document.getElementsByClassName("parallaxed-img");
-            var i;
-            for (i = 0; i < x.length; i++) {
-                x[i].style.transform = 'translate(' + amountMovedX + 'px,' + amountMovedY + 'px)'
-            }
+
+        var inputs = document.getElementsByClassName("mouse-hover");
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener("mousemove", function (e) {
+                var amountMovedX = (e.clientX * -0.2 / 2);
+                var amountMovedY = (e.clientY * -0.2 / 2);
+                console.log(amountMovedX)
+                var x = document.getElementsByClassName("parallaxed-img");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.transform = 'translate(' + amountMovedX + 'px,' + amountMovedY + 'px)'
+
+                }
+            });
         }
+
+        // function parallaxedImg(e) {
+        //     var amountMovedX = (e.clientX * -0.2 / 5);
+        //     var amountMovedY = (e.clientY * -0.2 / 5);
+        //     var x = document.getElementsByClassName("parallaxed-img");
+        //     var i;
+        //     for (i = 0; i < x.length; i++) {
+        //         x[i].style.transform = 'translate(' + amountMovedX + 'px,' + amountMovedY + 'px)'
+        //     }
+        // }
 
     </script>
 
