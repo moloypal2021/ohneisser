@@ -178,7 +178,7 @@
         <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 relative transition duration-700 ease-in relative"
             :class="{'transform -translate-y-full' : openPage === 2 }">
             <div class="flex items-center w-full h-full">
-                <div class="flex flex-col lg:h-[60vh] sm:h-[62vh] h-[68vh]  overflow-y-scroll overflow-x-hidden hide-scrollbar w-screen"
+                <div class="flex flex-col lg:h-[60vh] sm:h-[62vh] h-[68vh] hide-scrollbar overflow-y-scroll overflow-x-hidden  w-screen"
                     x-data="infinity()" x-init="clone()" @scroll.self="scroll($event.target)" id="scroll-content">
                     <!-- Item 1  -->
                     <div class="group flex lg:flex-row flex-col lg:items-center md:py-5 sm:py-3 py-3 w-full static"
@@ -213,19 +213,19 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]" id="carousel1"
-                                    x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
+                                    id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/img1.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/img2.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/img3.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                 </div>
                             </div>
@@ -276,27 +276,27 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]" id="carousel1"
-                                    x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
+                                    id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/Mockup-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/Mockup2-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/Mockup3-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/Mockup4-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/Top View Grid-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                 </div>
                             </div>
@@ -365,43 +365,43 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]" id="carousel1"
-                                    x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
+                                    id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/north/3-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/north/4-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/north/7-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/north/8-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/north/12-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/north/13-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/north/Dokumentation_Andries_Ohneisser (1)-21-min.jpg"
-                                            alt="" class="w-full max-h-[80vh] object-contain object-center ">
+                                            alt="" class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/north/Dokumentation_Andries_Ohneisser (1)-22-min.jpg"
-                                            alt="" class="w-full max-h-[80vh] object-contain object-center ">
+                                            alt="" class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/north/Dokumentation_Andries_Ohneisser (1)-25-min.jpg"
-                                            alt="" class="w-full max-h-[80vh] object-contain object-center ">
+                                            alt="" class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                 </div>
                             </div>
@@ -446,19 +446,19 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]" id="carousel1"
-                                    x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
+                                    id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/hey/1-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/hey/2-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/hey/ezgif.com-optimize.gif" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                 </div>
                             </div>
@@ -510,27 +510,27 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]" id="carousel1"
-                                    x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
+                                    id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/donar/Dönar1-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/donar/Dönar2-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/donar/dönar3-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/donar/dönar4-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/donar/dönar5-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                 </div>
                             </div>
@@ -584,27 +584,27 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]" id="carousel1"
-                                    x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
+                                    id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/devio/1-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/devio/2-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/devio/3-min.gif" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/devio/3-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/devio/4-min.gif" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                 </div>
                             </div>
@@ -646,15 +646,15 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 md:z-[-1]"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]" id="carousel1"
-                                    x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
+                                    id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/burger/1-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/burger/2-min.jpg" alt=""
-                                            class="w-full max-h-[80vh] object-contain object-center ">
+                                            class="w-full max-h-[80vh] object-contain object-center">
                                     </div>
 
                                 </div>
@@ -738,17 +738,20 @@
                     });
                 },
                 scroll(el) {
+
                     var element = el;
                     var lastDiv = document.querySelector("#scroll-content > div:last-child");
                     var lastDivOffset = lastDiv.offsetTop + lastDiv.clientHeight;
                     var elementOffset = element.scrollTop + element.clientHeight;
 
-                    if (elementOffset > lastDiv.offsetTop - 300) {
+                    if (elementOffset > lastDiv.offsetTop - 100) {
                         element.append(element.firstElementChild);
+                        console.log('up');
                     }
 
-                    if (element.scrollTop < lastDiv.clientHeight - 10) {
+                    if (element.scrollTop < lastDiv.clientHeight - 30) {
                         element.prepend(element.lastElementChild);
+                        console.log('down');
                     }
                 }
             }
@@ -759,6 +762,7 @@
 
         b.addEventListener("mousemove", function (event) {
             parallaxed(event);
+            parallaxedImg(event);
 
         });
 
@@ -771,6 +775,17 @@
                 x[i].style.transform = 'translate(' + amountMovedX + 'px,' + amountMovedY + 'px)'
             }
         }
+
+        function parallaxedImg(e) {
+            var amountMovedX = (e.clientX * -0.2 / 5);
+            var amountMovedY = (e.clientY * -0.2 / 5);
+            var x = document.getElementsByClassName("parallaxed-img");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.transform = 'translate(' + amountMovedX + 'px,' + amountMovedY + 'px)'
+            }
+        }
+
     </script>
 
 
