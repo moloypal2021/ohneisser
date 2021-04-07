@@ -609,6 +609,15 @@ video {
 .z-\[500\] {
 	z-index: 500;
 }
+.z-0 {
+	z-index: 0;
+}
+.z-\[100000\] {
+	z-index: 100000;
+}
+.z-40 {
+	z-index: 40;
+}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
@@ -826,6 +835,9 @@ video {
 .opacity-0 {
 	opacity: 0;
 }
+.opacity-90 {
+	opacity: 0.9;
+}
 .transition {
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -957,12 +969,47 @@ video {
 
 @media (min-width: 768px) {
 
+	.md\:absolute {
+		position: absolute;
+	}
+
+	.md\:inset-0 {
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+	}
+
 	.md\:z-\[-1\] {
 		z-index: -1;
 	}
 
 	.md\:z-\[5\] {
 		z-index: 5;
+	}
+
+	.md\:z-\[1\] {
+		z-index: 1;
+	}
+
+	.md\:z-\[0\] {
+		z-index: 0;
+	}
+
+	.md\:z-20 {
+		z-index: 20;
+	}
+
+	.md\:z-40 {
+		z-index: 40;
+	}
+
+	.md\:z-10 {
+		z-index: 10;
+	}
+
+	.md\:z-50 {
+		z-index: 50;
 	}
 
 	.md\:mx-2 {
@@ -985,6 +1032,18 @@ video {
 
 	.md\:opacity-0 {
 		opacity: 0;
+	}
+
+	.md\:opacity-100 {
+		opacity: 1;
+	}
+
+	.md\:opacity-10 {
+		opacity: 0.1;
+	}
+
+	.md\:opacity-90 {
+		opacity: 0.9;
 	}
 }
 
