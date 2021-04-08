@@ -806,6 +806,10 @@
                         var cln = item.cloneNode(true);
                         parent.appendChild(cln);
                     });
+                    children.forEach(function (item) {
+                        var cln = item.cloneNode(true);
+                        parent.appendChild(cln);
+                    });
                 },
                 scroll(el) {
 
