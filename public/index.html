@@ -809,20 +809,20 @@
                 },
                 scroll(el) {
 
-                    var element = el;
-                    var lastDiv = document.querySelector("#scroll-content > div:last-child");
-                    var lastDivOffset = lastDiv.offsetTop + lastDiv.clientHeight;
-                    var elementOffset = element.scrollTop + element.clientHeight;
+                    // var element = el;
+                    // var lastDiv = document.querySelector("#scroll-content > div:last-child");
+                    // var lastDivOffset = lastDiv.offsetTop + lastDiv.clientHeight;
+                    // var elementOffset = element.scrollTop + element.clientHeight;
 
-                    if (elementOffset > lastDiv.offsetTop - 100) {
-                        element.append(element.firstElementChild);
-                        console.log('up');
-                    }
+                    // if (elementOffset > lastDiv.offsetTop - 100) {
+                    //     element.append(element.firstElementChild);
+                    //     console.log('up');
+                    // }
 
-                    if (element.scrollTop < lastDiv.clientHeight - 30) {
-                        element.prepend(element.lastElementChild);
-                        console.log('down');
-                    }
+                    // if (element.scrollTop < lastDiv.clientHeight - 30) {
+                    //     element.prepend(element.lastElementChild);
+                    //     console.log('down');
+                    // }
                 }
             }
         }
