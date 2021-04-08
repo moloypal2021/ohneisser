@@ -15,7 +15,7 @@
 
 <body>
     <main class="bg-color w-full h-screen overflow-hidden relative" x-data="{
-        popUp: false, openPage: 1}">
+        popUp: false, openPage: 2}">
         <!-- Pop up Section Start-->
         <section class="bg-color fixed inset-0 sm:p-8 px-4 overflow-hidden z-50" x-show="popUp">
             <button @click="popUp = false"
@@ -155,8 +155,9 @@
         <!-- Index Page Section Start -->
         <div class="w-full h-full sm:p-8 py-8 px-4 relative transition duration-700 ease-in-out">
             <!-- Video -->
-            <div class="flex items-center justify-center w-full h-full">
-                <div class="" @click="openPage = 2">
+            <div class="flex items-center justify-center w-full h-full ">
+                <div class="transition duration-1000 ease-in" @click="openPage = 2"
+                    :class="{'transform scale-125' : openPage === 2 }">
                     <video
                         class="lg:w-[62vw] lg:h-[46.5vh] sm:w-[78vw] sm:h-[31.3vh] w-full h-[214px] object-cover parallaxed"
                         width="1920px" height="1080px" loop autoplay src="./assets/images/Komp 3_1(1).mp4"></video>
@@ -166,7 +167,7 @@
             <!-- ohneisser text Section -->
             <section
                 class="absolute bottom-0 pb-16 inset-x-0 sm:px-6 px-4 flex justify-start items-center transition duration-1000 ease-in"
-                :class="{'transform scale-0' : openPage === 2 }">
+                :class="{'transform scale-125' : openPage === 2 }">
                 <img src="./assets/images/ohneisser.svg" alt=""
                     class="lg:min-w-[1389px] sm:min-w-[1783px] min-w-[1530px] w-full transform lg:translate-x-0 -translate-x-32">
             </section>
@@ -175,13 +176,13 @@
         <!-- Index Page Section End -->
 
         <!-- Second Page Section Start -->
-        <div class="bg-color w-full h-screen sm:p-8 py-8 px-4 relative transition duration-700 ease-in relative"
+        <div class="bg-color w-screen h-screen overflow-hidden sm:p-8 py-8 px-4 relative transition duration-700 ease-in relative"
             :class="{'transform -translate-y-full delay-500' : openPage === 2 }">
-            <div class="flex items-center w-full h-full">
-                <div class="flex flex-col lg:h-[60vh] sm:h-[62vh] h-[60vh] hide-scrollbar overflow-y-scroll overflow-x-hidden  w-screen"
+            <div class="flex flex-col justify-center w-full h-full">
+                <div class="lg:h-[60vh] sm:h-[62vh] h-[60vh] w-max hide-scrollbar overflow-y-scroll overflow-x-hidden"
                     x-data="infinity()" x-init="clone()" @scroll.self="scroll($event.target)" id="scroll-content">
                     <!-- Item 1  -->
-                    <div class="group flex lg:flex-row flex-col lg:items-center w-full static overflow-x-hidden hide-scrollbar lg:min-h-[100px] sm:min-h-[145px] min-h-[124px]"
+                    <div class="group flex lg:flex-row flex-col lg:items-center lg:py-3 lg:my-3 sm:my-3 sm:py-2 my-2"
                         x-data="carousel()" x-init="init()">
                         <h1
                             class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-0">
@@ -191,7 +192,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="min-w-[400px] lg:w-full w-10/12 opacity-100 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="min-w-[100vw] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hide()">
@@ -241,10 +242,8 @@
                     </div>
                     <!-- Item 1  -->
 
-
-
                     <!-- Item 2  -->
-                    <div class="group flex lg:flex-row flex-col lg:items-center md:py-5 sm:py-3 py-3 w-full static overflow-x-hidden hide-scrollbar lg:min-h-[100px] sm:min-h-[145px] min-h-[124px]"
+                    <div class="group flex lg:flex-row flex-col lg:items-center lg:py-3 lg:my-3 sm:my-3 sm:py-2 my-2"
                         x-data="carousel()" x-init="init()">
                         <h1
                             class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-0">
@@ -254,7 +253,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="min-w-[400px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hide()">
@@ -325,7 +324,7 @@
                     <!-- Item 2  -->
 
                     <!-- Item 3  -->
-                    <div class="group flex lg:flex-row flex-col lg:items-center md:py-5 sm:py-3 py-3 w-full static overflow-x-hidden hide-scrollbar lg:min-h-[100px] sm:min-h-[145px] min-h-[124px]"
+                    <div class="group flex lg:flex-row flex-col lg:items-center lg:py-3 lg:my-3 sm:my-3 sm:py-2 my-2"
                         x-data="carousel()" x-init="init()">
                         <h1
                             class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-0">
@@ -335,7 +334,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="min-w-[400px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hide()">
@@ -451,7 +450,7 @@
                     <!-- Item 3  -->
 
                     <!-- Item 4  -->
-                    <div class="group flex lg:flex-row flex-col lg:items-center md:py-5 sm:py-3 py-3 w-full static overflow-x-hidden hide-scrollbar lg:min-h-[100px] sm:min-h-[145px] min-h-[124px]"
+                    <div class="group flex lg:flex-row flex-col lg:items-center lg:py-3 lg:my-3 sm:my-3 sm:py-2 my-2"
                         x-data="carousel()" x-init="init()">
                         <h1
                             class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-0">
@@ -461,7 +460,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="min-w-[400px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hide()">
@@ -515,7 +514,7 @@
                     <!-- Item 4  -->
 
                     <!-- Item 5  -->
-                    <div class="group flex lg:flex-row flex-col lg:items-center md:py-5 sm:py-3 py-3 w-full static overflow-x-hidden hide-scrollbar lg:min-h-[100px] sm:min-h-[145px] min-h-[124px]"
+                    <div class="group flex lg:flex-row flex-col lg:items-center lg:py-3 lg:my-3 sm:my-3 sm:py-2 my-2"
                         x-data="carousel()" x-init="init()">
                         <h1
                             class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-0">
@@ -525,7 +524,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="min-w-[400px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hide()">
@@ -599,7 +598,7 @@
                     <!-- Item 5  -->
 
                     <!-- Item 6  -->
-                    <div class="group flex lg:flex-row flex-col lg:items-center md:py-5 sm:py-3 py-3 w-full static overflow-x-hidden hide-scrollbar lg:min-h-[100px] sm:min-h-[145px] min-h-[124px]"
+                    <div class="group flex lg:flex-row flex-col lg:items-center lg:py-3 lg:my-3 sm:my-3 sm:py-2 my-2"
                         x-data="carousel()" x-init="init()">
                         <h1
                             class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-0">
@@ -609,7 +608,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="min-w-[400px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hide()">
@@ -683,7 +682,7 @@
                     <!-- Item 6  -->
 
                     <!-- Item 7  -->
-                    <div class="group flex lg:flex-row flex-col lg:items-center md:py-5 sm:py-3 py-3 w-full static overflow-x-hidden hide-scrollbar lg:min-h-[100px] sm:min-h-[145px] min-h-[124px]"
+                    <div class="group flex lg:flex-row flex-col lg:items-center lg:py-3 lg:my-3 sm:my-3 sm:py-2 my-2"
                         x-data="carousel()" x-init="init()">
                         <h1
                             class="group-hover:lg:text-[40px] lg:text-4xl group-hover:sm:text-4xl sm:text-[30px] group-hover:text-[25px] text-[23px] font-black uppercase text-[#A59DA6] group-hover:text-black tracking-[-3%] whitespace-nowrap lg:mb-0 mb-2 lg:mr-4 sm:mr-2 z-0">
@@ -693,7 +692,7 @@
                         <div class="">
                             <!-- Text side Slider Nav Start -->
                             <div
-                                class="min-w-[400px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
+                                class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
                                 <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hide()">
@@ -734,8 +733,6 @@
                         <!-- Slider End -->
                     </div>
                     <!-- Item 7  -->
-
-
                 </div>
             </div>
         </div>
