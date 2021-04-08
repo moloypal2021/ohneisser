@@ -2,13 +2,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @font-face {
-    font-family: 'Univers Next Pro Medium Condensed';
-    font-style: normal;
-    font-weight: 600;
-    src: local('Univers Next Pro Medium Condensed'), url('../font/Univers Next Pro Medium Condensed.woff') format('woff');
-} */
-
 @layer base {
     body {
         font-family: 'Univers Next Pro Bold Condensed';
@@ -24,4 +17,12 @@
 
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
+}
+
+.hide-scrollbar {
+    overflow: auto;
+    -ms-overflow-style: none;
+    /* IE 11 */
+    scrollbar-width: none;
+    /* Firefox 64 */
 }
