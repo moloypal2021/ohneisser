@@ -859,17 +859,18 @@
                     });
                 },
                 scroll(el) {
+
                     var element = el;
                     var lastDiv = document.querySelector("#scroll-content > div:last-child");
+                    var firstDiv = document.querySelector("#scroll-content > div:first-child");
+
                     var lastDivOffset = lastDiv.offsetTop + lastDiv.clientHeight;
+                    var firstDivOffset = firstDiv.offsetTop + firstDiv.clientHeight;
                     var elementOffset = element.scrollTop + element.clientHeight;
                     if (elementOffset > lastDiv.offsetTop - 300) {
                         element.append(element.firstElementChild);
                     }
-                    if (element.scrollTop < lastDiv.clientHeight - 30) {
-                        element.prepend(element.lastElementChild);
-                        element.prepend(element.lastElementChild);
-                        element.prepend(element.lastElementChild);
+                    if (element.scrollTop < firstDiv.clientHeight + 20) {
                         element.prepend(element.lastElementChild);
                     }
                 }
