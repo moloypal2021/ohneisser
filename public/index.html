@@ -191,25 +191,28 @@
                         </h1>
                         <!-- Slider Start -->
                         <div class="">
-                            <!-- Text side Slider Nav Start -->
+                            <!-- Text side Slider Nav Start  -->
                             <div
                                 class="min-w-[100vw] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex">
+                                <div class="flex" @click.away="clickHide()">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/img1.jpg" alt="" @mouseenter="select(0)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/img1.jpg" alt="" @click="clickShow(0)"
+                                            @mouseenter="hoverShow(0)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/img2.jpg" alt="" @mouseenter="select(1)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/img2.jpg" alt="" @click="clickShow(1)"
+                                            @mouseenter="hoverShow(1)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/img3.jpg" alt="" @mouseenter="select(2)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/img3.jpg" alt="" @click="clickShow(2)"
+                                            @mouseenter="hoverShow(2)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
@@ -255,34 +258,39 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full">
+                                <div class="flex w-full" @click.away="clickHide()">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/Mockup-min.jpg" alt="" @mouseenter="select(0)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/Mockup-min.jpg" alt="" @click="clickShow(0)"
+                                            @mouseenter="hoverShow(0)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/Mockup2-min.jpg" alt="" @mouseenter="select(1)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/Mockup2-min.jpg" alt="" @click="clickShow(1)"
+                                            @mouseenter="hoverShow(1)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/Mockup3-min.jpg" alt="" @mouseenter="select(2)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/Mockup3-min.jpg" alt="" @click="clickShow(2)"
+                                            @mouseenter="hoverShow(2)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/Mockup4-min.jpg" alt="" @mouseenter="select(3)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/Mockup4-min.jpg" alt="" @click="clickShow(3)"
+                                            @mouseenter="hoverShow(3)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/Top View Grid-min.jpg" alt="" @mouseenter="select(4)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/Top View Grid-min.jpg" alt="" @click="clickShow(4)"
+                                            @mouseenter="hoverShow(4)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
@@ -336,61 +344,67 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full">
+                                <div class="flex w-full" @click.away="clickHide()">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/north/3-min.jpg" alt="" @mouseenter="select(0)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/north/3-min.jpg" alt="" @click="clickShow(0)"
+                                            @mouseenter="hoverShow(0)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/north/4-min.jpg" alt="" @mouseenter="select(1)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/north/4-min.jpg" alt="" @click="clickShow(1)"
+                                            @mouseenter="hoverShow(1)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/north/7-min.jpg" alt="" @mouseenter="select(2)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/north/7-min.jpg" alt="" @click="clickShow(2)"
+                                            @mouseenter="hoverShow(2)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/north/8-min.jpg" alt="" @mouseenter="select(3)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/north/8-min.jpg" alt="" @click="clickShow(3)"
+                                            @mouseenter="hoverShow(3)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/north/12-min.jpg" alt="" @mouseenter="select(4)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/north/12-min.jpg" alt="" @click="clickShow(4)"
+                                            @mouseenter="hoverShow(4)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/north/13-min.jpg" alt="" @mouseenter="select(5)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/north/13-min.jpg" alt="" @click="clickShow(5)"
+                                            @mouseenter="hoverShow(5)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
+                                        @mouseleave="hoverHide()">
                                         <img src="./assets/images/north/Dokumentation_Andries_Ohneisser (1)-21-min.jpg"
-                                            alt="" @mouseenter="select(6)"
+                                            alt="" @click="clickShow(6)" @mouseenter="hoverShow(6)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
+                                        @mouseleave="hoverHide()">
                                         <img src="./assets/images/north/Dokumentation_Andries_Ohneisser (1)-22-min.jpg"
-                                            alt="" @mouseenter="select(7)"
+                                            alt="" @click="clickShow(7)" @mouseenter="hoverShow(7)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
+                                        @mouseleave="hoverHide()">
                                         <img src="./assets/images/north/Dokumentation_Andries_Ohneisser (1)-25-min.jpg"
-                                            alt="" @mouseenter="select(8)"
+                                            alt="" @click="clickShow(8)" @mouseenter="hoverShow(8)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
@@ -462,23 +476,25 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full">
+                                <div class="flex w-full" @click.away="clickHide()">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/hey/1-min.jpg" alt="" @mouseenter="select(0)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/hey/1-min.jpg" alt="" @click="clickShow(0)"
+                                            @mouseenter="hoverShow(0)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/hey/2-min.jpg" alt="" @mouseenter="select(1)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/hey/2-min.jpg" alt="" @click="clickShow(1)"
+                                            @mouseenter="hoverShow(1)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
+                                        @mouseleave="hoverHide()">
                                         <img src="./assets/images/hey/ezgif.com-optimize.gif" alt=""
-                                            @mouseenter="select(2)"
+                                            @click="clickShow(2)" @mouseenter="hoverShow(2)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
@@ -526,34 +542,39 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full">
+                                <div class="flex w-full" @click.away="clickHide()">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/donar/Dönar1-min.jpg" @mouseenter="select(0)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/donar/Dönar1-min.jpg" @click="clickShow(0)"
+                                            @mouseenter="hoverShow(0)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/donar/Dönar2-min.jpg" alt="" @mouseenter="select(1)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/donar/Dönar2-min.jpg" alt="" @click="clickShow(1)"
+                                            @mouseenter="hoverShow(1)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/donar/dönar3-min.jpg" alt="" @mouseenter="select(2)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/donar/dönar3-min.jpg" alt="" @click="clickShow(2)"
+                                            @mouseenter="hoverShow(2)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/donar/dönar4-min.jpg" alt="" @mouseenter="select(3)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/donar/dönar4-min.jpg" alt="" @click="clickShow(3)"
+                                            @mouseenter="hoverShow(3)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/donar/dönar5-min.jpg" alt="" @mouseenter="select(4)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/donar/dönar5-min.jpg" alt="" @click="clickShow(4)"
+                                            @mouseenter="hoverShow(4)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
@@ -610,34 +631,39 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full">
+                                <div class="flex w-full" @click.away="clickHide()">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/devio/1-min.jpg" @mouseenter="select(0)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/devio/1-min.jpg" @click="clickShow(0)"
+                                            @mouseenter="hoverShow(0)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/devio/2-min.jpg" alt="" @mouseenter="select(1)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/devio/2-min.jpg" alt="" @click="clickShow(1)"
+                                            @mouseenter="hoverShow(1)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/devio/3-min.gif" alt="" @mouseenter="select(2)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/devio/3-min.gif" alt="" @click="clickShow(2)"
+                                            @mouseenter="hoverShow(2)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/devio/3-min.jpg" alt="" @mouseenter="select(3)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/devio/3-min.jpg" alt="" @click="clickShow(3)"
+                                            @mouseenter="hoverShow(3)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/devio/4-min.gif" alt="" @mouseenter="select(4)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/devio/4-min.gif" alt="" @click="clickShow(4)"
+                                            @mouseenter="hoverShow(4)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
@@ -694,16 +720,18 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full">
+                                <div class="flex w-full" @click.away="clickHide()">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/burger/1-min.jpg" @mouseenter="select(0)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/burger/1-min.jpg" @click="clickShow(0)"
+                                            @mouseenter="hoverShow(0)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
-                                        @mouseleave="hide()">
-                                        <img src="./assets/images/burger/2-min.jpg" alt="" @mouseenter="select(1)"
+                                        @mouseleave="hoverHide()">
+                                        <img src="./assets/images/burger/2-min.jpg" alt="" @click="clickShow(1)"
+                                            @mouseenter="hoverShow(1)"
                                             class="w-[80px] h-[55px] md:absolute md:inset-0 md:z-50"
                                             :class="{'md:opacity-0' : show === 1}">
                                     </div>
@@ -778,8 +806,33 @@
                     });
                     flkty.on('change', i => this.active = i);
                 },
+                hoverShow(props) {
+                    if (window.innerWidth > 768) {
+                        var props = props;
+                        this.show = 1;
+                        this.select(props);
+                    }
+                },
+                hoverHide() {
+                    if (window.innerWidth > 768) {
+                        this.show = 0;
+                    }
+                },
+                clickShow(props) {
+                    if (window.innerWidth < 768) {
+                        var props = props;
+                        this.show = 1;
+                        this.select(props);
+                    }
+                },
+                clickHide() {
+                    if (window.innerWidth < 768) {
+                        this.show = 0;
+                    }
+                },
                 select(props) {
-                    this.show = 1;
+                    // console.log(this.$event)
+                    // this.show = 1;
                     var flkty = new Flickity(this.$refs.carousel);
                     flkty.select(props);
 
@@ -802,10 +855,6 @@
                     var parent = this.$el;
                     NodeList.prototype.forEach = Array.prototype.forEach;
                     var children = parent.childNodes;
-                    children.forEach(function (item) {
-                        var cln = item.cloneNode(true);
-                        parent.appendChild(cln);
-                    });
                     children.forEach(function (item) {
                         var cln = item.cloneNode(true);
                         parent.appendChild(cln);
@@ -841,7 +890,7 @@
         });
 
         function parallaxed(e) {
-            if (window.innerWidth > 960) {
+            if (window.innerWidth > 768) {
                 var amountMovedX = (e.clientX * -0.2 / 6);
                 var amountMovedY = (e.clientY * -0.2 / 6);
                 var x = document.getElementsByClassName("parallaxed");
@@ -849,25 +898,31 @@
                 for (i = 0; i < x.length; i++) {
                     x[i].style.transform = 'translate(' + amountMovedX + 'px,' + amountMovedY + 'px)'
                 }
+            } else {
+                var x = document.getElementsByClassName("parallaxed");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.transform = 'translate(0px, 0px)'
+                }
             }
 
         }
 
 
-        var inputs = document.getElementsByClassName("mouse-hover");
-        for (var i = 0; i < inputs.length; i++) {
-            inputs[i].addEventListener("mousemove", function (e) {
-                var amountMovedX = (e.clientX * -0.2 / 2);
-                var amountMovedY = (e.clientY * -0.2 / 2);
-                console.log(amountMovedX)
-                var x = document.getElementsByClassName("parallaxed-img");
-                var i;
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.transform = 'translate(' + amountMovedX + 'px,' + amountMovedY + 'px)'
+        // var inputs = document.getElementsByClassName("mouse-hover");
+        // for (var i = 0; i < inputs.length; i++) {
+        //     inputs[i].addEventListener("mousemove", function (e) {
+        //         var amountMovedX = (e.clientX * -0.2 / 2);
+        //         var amountMovedY = (e.clientY * -0.2 / 2);
+        //         console.log(amountMovedX)
+        //         var x = document.getElementsByClassName("parallaxed-img");
+        //         var i;
+        //         for (i = 0; i < x.length; i++) {
+        //             x[i].style.transform = 'translate(' + amountMovedX + 'px,' + amountMovedY + 'px)'
 
-                }
-            });
-        }
+        //         }
+        //     });
+        // }
 
         // function parallaxedImg(e) {
         //     var amountMovedX = (e.clientX * -0.2 / 5);
