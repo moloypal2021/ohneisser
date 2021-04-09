@@ -15,11 +15,17 @@
 
 <body>
     <main class="bg-color w-full h-screen overflow-hidden relative" x-data="{
-        popUp: false, openPage: 2}">
+        popUp: false, openPage: 1}">
         <!-- Pop up Section Start-->
-        <section class="bg-color fixed inset-0 sm:p-8 px-4 overflow-hidden z-50" x-show="popUp">
+        <section class="bg-color fixed inset-0 sm:p-8 px-4 overflow-hidden z-50" x-show="popUp"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-95"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-95">
             <button @click="popUp = false"
-                class="text-base font-black text-black focus:outline-none pb-8 pl-8 fixed right-12 top-8 z-50">
+                class="text-base font-black text-black focus:outline-none pb-8 pl-8 fixed sm:right-12 right-8 top-8 z-50">
                 <svg class="fill-current text-[#202020] hover:text-[#A59DA6]" width="16" height="16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -29,7 +35,7 @@
             </button>
 
             <div
-                class="flex sm:items-center items-start sm:justify-center w-full h-full xl:px-20 lg:px-12 overflow-y-auto hide-scrollbar py-8">
+                class="flex sm:items-center items-start sm:justify-center w-full h-full xl:px-20 lg:px-12 overflow-y-auto hide-scrollbar  py-8">
                 <div
                     class="grid lg:grid-cols-2 xl:gap-20 lg:gap-12 gap-2 lg:max-w-6xl md:max-w-3xl max-w-xl mx-auto py-10">
                     <div class="xl:pr-5">
@@ -177,8 +183,8 @@
         <!-- Index Page Section End -->
 
         <!-- Second Page Section Start -->
-        <div class="bg-color w-screen h-screen overflow-hidden sm:p-8 py-8 px-4 relative transition duration-700 ease-in relative"
-            :class="{'transform -translate-y-full delay-500' : openPage === 2 }">
+        <div class="bg-color w-screen h-screen overflow-hidden sm:p-8 py-8 px-4 relative transform opacity-0 transition duration-700 ease-in relative"
+            :class="{'-translate-y-full delay-75 opacity-100' : openPage === 2 }">
             <div class="flex flex-col justify-center w-full h-full">
                 <div class="lg:h-[60vh] sm:h-[62vh] h-[60vh] w-max hide-scrollbar overflow-y-scroll overflow-x-hidden"
                     x-data="infinity()" x-init="clone()" @scroll.self="scroll($event.target)" id="scroll-content">
@@ -194,7 +200,7 @@
                             <!-- Text side Slider Nav Start  -->
                             <div
                                 class="min-w-[100vw] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex" @click.away="clickHide()">
+                                <div class="flex">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hoverHide()">
                                         <img src="./assets/images/img1.jpg" alt="" @click="clickShow(0)"
@@ -224,8 +230,8 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 z-40 parallaxed"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]" id="carousel1"
-                                    x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
+                                    @click.away="clickHide()" id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/img1.jpg" alt=""
                                             class="w-full max-h-[80vh] object-contain object-center">
@@ -258,7 +264,7 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full" @click.away="clickHide()">
+                                <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hoverHide()">
                                         <img src="./assets/images/Mockup-min.jpg" alt="" @click="clickShow(0)"
@@ -302,8 +308,8 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 z-40 parallaxed"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
-                                    id="carousel1" x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
+                                    @click.away="clickHide()" id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/Mockup-min.jpg" alt=""
                                             class="w-full max-h-[80vh] object-contain object-center">
@@ -344,7 +350,7 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full" @click.away="clickHide()">
+                                <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hoverHide()">
                                         <img src="./assets/images/north/3-min.jpg" alt="" @click="clickShow(0)"
@@ -418,8 +424,8 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 z-40 parallaxed"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
-                                    id="carousel1" x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
+                                    @click.away="clickHide()" id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/north/3-min.jpg" alt=""
                                             class="w-full max-h-[80vh] object-contain object-center">
@@ -476,7 +482,7 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full" @click.away="clickHide()">
+                                <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hoverHide()">
                                         <img src="./assets/images/hey/1-min.jpg" alt="" @click="clickShow(0)"
@@ -508,8 +514,8 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 z-40 parallaxed"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
-                                    id="carousel1" x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
+                                    @click.away="clickHide()" id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/hey/1-min.jpg" alt=""
                                             class="w-full max-h-[80vh] object-contain object-center">
@@ -542,7 +548,7 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full" @click.away="clickHide()">
+                                <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hoverHide()">
                                         <img src="./assets/images/donar/Dönar1-min.jpg" @click="clickShow(0)"
@@ -587,8 +593,8 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 z-40 parallaxed"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
-                                    id="carousel1" x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
+                                    @click.away="clickHide()" id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/donar/Dönar1-min.jpg" alt=""
                                             class="w-full max-h-[80vh] object-contain object-center">
@@ -631,7 +637,7 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full" @click.away="clickHide()">
+                                <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hoverHide()">
                                         <img src="./assets/images/devio/1-min.jpg" @click="clickShow(0)"
@@ -676,8 +682,8 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 z-40 parallaxed"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
-                                    id="carousel1" x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
+                                    @click.away="clickHide()" id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/devio/1-min.jpg" alt=""
                                             class="w-full max-h-[80vh] object-contain object-center">
@@ -720,7 +726,7 @@
                             <!-- Text side Slider Nav Start -->
                             <div
                                 class="min-w-[300px] lg:w-full w-10/12 opacity-0 group-hover:opacity-100 hide-scrollbar overflow-x-scroll">
-                                <div class="flex w-full" @click.away="clickHide()">
+                                <div class="flex w-full">
                                     <div class="min-w-[80px] w-[80px] h-[55px] md:mx-2 mx-[6px] relative"
                                         @mouseleave="hoverHide()">
                                         <img src="./assets/images/burger/1-min.jpg" @click="clickShow(0)"
@@ -744,8 +750,8 @@
                             <div class="fixed inset-0 flex items-center justify-center w-full max-w-4xl mx-auto sm:px-8 py-8 px-4 z-40 parallaxed"
                                 x-show="show === 1">
                                 <!-- Set Unique ID For Each Slider -->
-                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw] parallaxed-img"
-                                    id="carousel1" x-ref="carousel">
+                                <div class="carousel carousel-main w-full sm:max-w-[80vw] max-w-[95vw]"
+                                    @click.away="clickHide()" id="carousel1" x-ref="carousel">
                                     <div class="carousel-cell w-full">
                                         <img src="./assets/images/burger/1-min.jpg" alt=""
                                             class="w-full max-h-[80vh] object-contain object-center">
@@ -802,15 +808,16 @@
                         resize: true,
                         adaptiveHeight: true,
                         contain: true,
-                        bgLazyLoad: 1
+                        bgLazyLoad: 1,
+                        fade: true
                     });
                     flkty.on('change', i => this.active = i);
                 },
                 hoverShow(props) {
                     if (window.innerWidth > 768) {
                         var props = props;
-                        this.show = 1;
                         this.select(props);
+                        this.show = 1;
                     }
                 },
                 hoverHide() {
@@ -821,8 +828,8 @@
                 clickShow(props) {
                     if (window.innerWidth < 768) {
                         var props = props;
-                        this.show = 1;
                         this.select(props);
+                        this.show = 1;
                     }
                 },
                 clickHide() {
@@ -863,15 +870,23 @@
                     var element = el;
                     var lastDiv = document.querySelector("#scroll-content > div:last-child");
                     var firstDiv = document.querySelector("#scroll-content > div:first-child");
-
                     var lastDivOffset = lastDiv.offsetTop + lastDiv.clientHeight;
                     var firstDivOffset = firstDiv.offsetTop + firstDiv.clientHeight;
                     var elementOffset = element.scrollTop + element.clientHeight;
-                    if (elementOffset > lastDiv.offsetTop - 300) {
-                        element.append(element.firstElementChild);
-                    }
-                    if (element.scrollTop < firstDiv.clientHeight + 20) {
-                        element.prepend(element.lastElementChild);
+                    if (window.innerWidth > 768) {
+                        if (elementOffset > lastDiv.offsetTop - 300) {
+                            element.append(element.firstElementChild);
+                        }
+                        if (element.scrollTop < firstDiv.clientHeight + 50) {
+                            element.prepend(element.lastElementChild);
+                        }
+                    } else {
+                        if (elementOffset > lastDiv.offsetTop - 50) {
+                            element.append(element.firstElementChild);
+                        }
+                        if (element.scrollTop < firstDiv.clientHeight + 10) {
+                            element.prepend(element.lastElementChild);
+                        }
                     }
                 }
             }

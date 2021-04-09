@@ -4,7 +4,8 @@
 @tailwind utilities;
 @layer base {
     body {
-        font-family: 'Univers Next Pro Bold Condensed';
+        font-family: 'Univers Next Pro Medium Condensed';
+        font-weight: 500;
     }
 }
 
