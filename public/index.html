@@ -159,14 +159,14 @@
                     class="sm:text-[15px] text-[13px] tracking-[-3%] font-black text-black focus:outline-none hover:text-[#A59DA6]">IMPRINT</button>
             </nav>
         </div>
-        <!-- Index Page Section Start transition duration-700 ease-in-out-->
+        <!-- Index Page Section Start -->
         <div class="w-full h-full sm:p-8 py-8 px-4 relative " x-show="openPage === 1"
             x-transition:enter="transition ease-out duration-500"
             x-transition:enter-start="opacity-0 transform scale-50"
             x-transition:enter-end="opacity-100 transform scale-100"
-            x-transition:leave="transition ease-in duration-700"
+            x-transition:leave="transition ease-in duration-500"
             x-transition:leave-start="opacity-100 transform scale-100"
-            x-transition:leave-end="opacity-0 transform scale-125">
+            x-transition:leave-end="opacity-0 transform scale-150">
             <!-- Video -->
             <div class="flex items-center justify-center w-full h-full ">
                 <div class="" @click="openPage = 2">
@@ -183,12 +183,12 @@
             </section>
             <!-- Main Section End -->
         </div>
-        <!-- Index Page Section End  transform opacity-0 transition duration-700 ease-in -->
+        <!-- Index Page Section End  -->
 
-        <!-- Second Page Section Start  :class="openPage === 2 ?'-translate-y-full delay-75 opacity-100 transform scale-100' : 'scale-0' " -->
-        <div class="bg-color w-screen h-screen overflow-hidden sm:p-8 py-8 px-4 relative" x-show="openPage === 2"
-            x-transition:enter="transition ease-out duration-1000 origin-left"
-            x-transition:enter-start="transform scale-0" x-transition:enter-end="transform scale-100"
+        <!-- Second Page Section Start  -->
+        <div class="bg-color w-screen h-screen overflow-hidden sm:p-8 py-8 px-4 relative transition delay-700"
+            x-show="openPage === 2" x-transition:enter="transition ease-out duration-[2.5s] delay-700 origin-left"
+            x-transition:enter-start="opacity-0 transform" x-transition:enter-end="opacity-100 transform"
             x-transition:leave="transition ease-in duration-300 origin-left"
             x-transition:leave-start="transform scale-100" x-transition:leave-end="transform scale-0">
             <div class="flex flex-col justify-center w-full h-full">
