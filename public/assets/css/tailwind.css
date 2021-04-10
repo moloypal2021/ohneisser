@@ -477,9 +477,6 @@ body {
 .absolute{
 	position: absolute;
 }
-.static{
-	position: static;
-}
 .inset-0{
 	top: 0px;
 	right: 0px;
@@ -556,9 +553,6 @@ body {
 .max-h-\[80vh\]{
 	max-height: 80vh;
 }
-.min-h-\[124px\]{
-	min-height: 124px;
-}
 .w-full{
 	width: 100%;
 }
@@ -624,6 +618,14 @@ body {
 .scale-125{
 	--tw-scale-x: 1.25;
 	--tw-scale-y: 1.25;
+}
+.scale-150{
+	--tw-scale-x: 1.5;
+	--tw-scale-y: 1.5;
+}
+.scale-75{
+	--tw-scale-x: .75;
+	--tw-scale-y: .75;
 }
 .cursor-pointer{
 	cursor: pointer;
@@ -842,9 +844,6 @@ body {
 	.sm\:h-\[62vh\]{
 		height: 62vh;
 	}
-	.sm\:min-h-\[145px\]{
-		min-height: 145px;
-	}
 	.sm\:w-\[78vw\]{
 		width: 78vw;
 	}
@@ -934,9 +933,6 @@ body {
 	}
 	.lg\:h-\[60vh\]{
 		height: 60vh;
-	}
-	.lg\:min-h-\[100px\]{
-		min-height: 100px;
 	}
 	.lg\:w-\[62vw\]{
 		width: 62vw;
