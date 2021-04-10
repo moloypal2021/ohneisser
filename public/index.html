@@ -184,7 +184,7 @@
 
         <!-- Second Page Section Start -->
         <div class="bg-color w-screen h-screen overflow-hidden sm:p-8 py-8 px-4 relative transform opacity-0 transition duration-700 ease-in relative"
-            :class="{'-translate-y-full delay-75 opacity-100' : openPage === 2 }">
+            :class="openPage === 2 ?'-translate-y-full delay-75 opacity-100 transform scale-100' : 'scale-0' ">
             <div class="flex flex-col justify-center w-full h-full">
                 <div class="lg:h-[60vh] sm:h-[62vh] h-[60vh] w-max hide-scrollbar overflow-y-scroll overflow-x-hidden"
                     x-data="infinity()" x-init="clone()" @scroll.self="scroll($event.target)" id="scroll-content">
